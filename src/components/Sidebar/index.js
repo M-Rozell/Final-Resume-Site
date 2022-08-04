@@ -1,34 +1,34 @@
 import React, { useState } from 'react'
 import { SidebarContainer, SidebarIcon, SidebarCloseIcon, SidebarWrapper, SidebarMenu, SidebarLink } from './SidebarElements'
 
-const Sidebar = ({ closeSidebar }) => {
+const Sidebar = ({ CloseSidebar }) => {
 
 
     return (
         <>
             <SidebarContainer >
 
-                <SidebarIcon onClick={() => closeSidebar(false)}>
+                <SidebarIcon onClick={() => CloseSidebar(false)}>
                     <SidebarCloseIcon />
                 </SidebarIcon>
 
                 <SidebarWrapper>
 
                     <SidebarMenu>
-                        <SidebarLink to='Hero' onClick={() => closeSidebar(false)}>Home</SidebarLink>
+                        <SidebarLink to='Hero' onClick={() => CloseSidebar(false)}>Home</SidebarLink>
                     </SidebarMenu>
 
                     <SidebarMenu>
-                        <SidebarLink to='About' onClick={() => closeSidebar(false)}>About</SidebarLink>
+                        <SidebarLink to='About' onClick={() => CloseSidebar(false)}>About</SidebarLink>
                     </SidebarMenu>
 
                     <SidebarMenu>
-                        <SidebarLink to='Projects' onClick={() => closeSidebar(false)}>Projects</SidebarLink>
+                        <SidebarLink to='Projects' onClick={() => CloseSidebar(false)}>Projects</SidebarLink>
                     </SidebarMenu>
 
 
                     <SidebarMenu>
-                        <SidebarLink to='Skills' onClick={() => closeSidebar(false)}>Skills</SidebarLink>
+                        <SidebarLink to='Skills' onClick={() => CloseSidebar(false)}>Skills</SidebarLink>
                     </SidebarMenu>
 
 

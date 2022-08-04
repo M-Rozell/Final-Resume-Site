@@ -5,7 +5,9 @@ import styled from 'styled-components';
 
 
 export const Nav = styled.nav`
+width: 100%;
 background: ${({scrollNav}) => (scrollNav ? 'transparent' : '#dfb255')};
+border: ${({scrollNav}) => (scrollNav ? 'transparent' : "3px solid #4a6961")};
 height: 70px;
 margin-top: -70px;
 display: flex;
@@ -52,7 +54,7 @@ align-items: center;
 list-style: none;
 text-align: center;
 top: 0;
-right: 50px;
+right: 20px;
 position: absolute;
 
 @media screen and (max-width: 768px) {
@@ -70,11 +72,11 @@ align-items: center;
 export const NavLinks = styled(LinkScroll)`
 
 appearance: button;
-  background-color: #95bb93;
+  background-color: #417173;
   background-image: none;
-  border: 1px solid #45ffc7;
+  border: 1px solid #F7EF8A;
   border-radius: 4px;
-  box-shadow: cornsilk 4px 4px 0 0, #45ffc7 4px 4px 0 1px;
+  box-shadow: cornsilk 4px 4px 0 0, #F7EF8A 4px 4px 0 1px;
   box-sizing: border-box;
   color: #F7EF8A;
   cursor: pointer;

@@ -33,7 +33,7 @@ const MainNavbar = () => {
             <FaBars />
           </MobileIcon>
 
-          {sidebar && <Sidebar closeSidebar={setSidebar} />}
+          {sidebar && <Sidebar CloseSidebar={setSidebar} />}
 
           <NavMenu>
 

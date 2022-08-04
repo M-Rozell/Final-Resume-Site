@@ -5,12 +5,15 @@ import { Link as LinkScroll } from 'react-scroll';
 
 export const SidebarContainer = styled.aside`
 position: fixed;
+margin: 0;
+padding: 0;
 z-index: 999;
-width: 100px;
-height: 200px;
-background: cornsilk;
+width: 350px;
+height: 50px;
+/* background: #82e6cf; */
+background-image: radial-gradient( #dfb255,#ddad0b );
 border-radius: 8px;
-box-shadow: 2px 2px 2px 2px black;
+box-shadow: 0 0 2px 2px #f0f9db;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -24,43 +27,41 @@ transition: 0.3s ease-in-out;
 `
 
 export const SidebarCloseIcon = styled(AiOutlineCloseCircle)`
-color: black;
+color: #f0f9db;
 `
 
 export const SidebarIcon = styled.div`
 position: absolute;
-top: 2px;
+top: 1px;
 right: 5px;
 background: transparent;
-font-size: 1rem;
+font-size: 1.5rem;
 cursor: pointer;
 outline: none;
 `
 
 export const SidebarWrapper = styled.div`
 color: #fff;
+position: absolute;
 display: flex;
-flex-direction: column;
-text-align: center;
-align-items: center;
-justify-content: center;
-margin-top: 20px;
+top: 0;
+left: 0;
+/* flex-direction: column; */
 `
 
 export const SidebarMenu = styled.ul`
-padding: 0;
+margin-top: 12px;
+justify-content: space-around;
 `
 
 export const SidebarLink = styled(LinkScroll)`
 display: flex;
-align-items: center;
-justify-content: center;
 font-size: 1rem;
 text-decoration: none;
 list-style: none;
 transition: all 0.2s ease-in-out;
 text-decoration: none;
-color: black;
+color: #f0f9db;
 cursor: pointer;
 
 &:hover {
