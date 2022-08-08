@@ -8,15 +8,13 @@ position: fixed;
 margin: 0;
 padding: 0;
 z-index: 999;
-width: 350px;
+width: 325px;
 height: 50px;
-/* background: #82e6cf; */
-background-image: radial-gradient( #dfb255,#ddad0b );
+background: #dfb255;
+/* background-image: radial-gradient( #dfb255,#ddad0b ); */
 border-radius: 8px;
-box-shadow: 0 0 2px 2px #f0f9db;
+/* box-shadow: 0 0 2px 2px #f0f9db; */
 display: flex;
-justify-content: center;
-align-items: center;
 top: 10px;
 right: 20px;
 transition: 0.3s ease-in-out;
@@ -42,16 +40,19 @@ outline: none;
 
 export const SidebarWrapper = styled.div`
 color: #fff;
-position: absolute;
+position: relative;
 display: flex;
-top: 0;
-left: 0;
-/* flex-direction: column; */
+flex-direction: row;
+transition: all 0.2s ease-in-out;
+justify-content: space-around;
+align-items: center;
+text-align: center;
+
 `
 
 export const SidebarMenu = styled.ul`
-margin-top: 12px;
-justify-content: space-around;
+display: flex;
+margin-left: 25px;
 `
 
 export const SidebarLink = styled(LinkScroll)`
@@ -59,7 +60,7 @@ display: flex;
 font-size: 1rem;
 text-decoration: none;
 list-style: none;
-transition: all 0.2s ease-in-out;
+
 text-decoration: none;
 color: #f0f9db;
 cursor: pointer;

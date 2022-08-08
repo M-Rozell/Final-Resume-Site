@@ -1,12 +1,9 @@
 import React from 'react';
-import { HeroContainer, NameBox, NameP, NameP1, HeroBg, VideoBg, DetailsBg, DetailsP, HiBg, HiP, Im } from './HeroElements';
-import Video from '../../video/Kira.mp4'
+import { HeroContainer, NameBox, NameP, NameP1, DetailsBg, DetailsP, HiBg, HiP, Im } from './HeroElements';
+
 const HeroSection = () => {
   return (
     <HeroContainer id='Hero'>
-      
-      
-      
       
       <NameBox>
         <HiBg>
@@ -22,9 +19,6 @@ const HeroSection = () => {
         <DetailsP>Full-Stack Developer</DetailsP>
       </DetailsBg>
       
-      {/* <HeroBg>
-        <VideoBg autoPlay loop muted src={Video} type='video/mp4' />
-      </HeroBg> */}
     
     </HeroContainer>
   )
