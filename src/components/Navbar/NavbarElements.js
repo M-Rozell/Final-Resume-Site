@@ -47,6 +47,14 @@ display: none;
 }
 `
 
+export const CatIcon = styled.div`
+position: absolute;
+top: 10px;
+left: 0;
+color: cornsilk;
+font-size: 3rem;
+` 
+
 export const NavMenu = styled.ul`
 display: flex;
 align-items: center;

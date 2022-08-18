@@ -2,14 +2,16 @@
 import React, { useState, useEffect } from 'react'
 import { FaBars } from 'react-icons/fa';
 import Sidebar from '../Sidebar';
-import { Nav, NavbarContainer, MobileIcon, NavMenu, NavItem, NavLinks } from './NavbarElements';
+import { Nav, NavbarContainer, CatIcon, MobileIcon, NavMenu, NavItem, NavLinks } from './NavbarElements';
+import { GiHollowCat} from 'react-icons/gi'
+
 
 const MainNavbar = () => {
 
   const [scrollNav, setScrollNav] = useState(false);
   const [sidebar, setSidebar] = useState(false);
   const [navIcon, setNavIcon] = useState(true);
-  const [ load, setLoad ] = useState(true)
+  const [cat, setCat] = useState(true)
 
   const changeNav = () => {
     if (window.scrollY >= 80) {
@@ -19,9 +21,21 @@ const MainNavbar = () => {
     }
   };
 
+  const changeCat = () => {
+    if(window.scrollY >= 80) {
+      setCat(false)
+    }else {
+      setCat(true)
+    }
+  }
+
   useEffect(() => {
     window.addEventListener('scroll', changeNav)
   }, []);
+
+  useEffect(() => {
+    window.addEventListener('scroll', changeCat)
+  }, [])
 
   const handleMobileIcon = () => {
     setSidebar(true)
@@ -34,6 +48,13 @@ const MainNavbar = () => {
       <Nav scrollNav={scrollNav}>
 
         <NavbarContainer>
+
+        <CatIcon>
+          {cat && < GiHollowCat  />}
+          
+          </CatIcon>
+
+
 
           {navIcon && <MobileIcon onClick={() => { handleMobileIcon() }}>
             <FaBars />

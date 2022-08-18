@@ -24,6 +24,10 @@ right: 20px;
 @media screen and (min-width: 768px){
     display: none;
 }
+
+@media screen and (max-width: 393px){
+    width: 280px
+}
 `
 export const SidebarWrapper = styled.div`
 display: flex;

@@ -15,8 +15,9 @@ import VehicleDetails from './components/ghibliComponents/VehicleDetails';
 
 
 const App = () => {
+    
 
-    return (
+    return  (
 
         <BrowserRouter>
         <Routes>
@@ -40,7 +41,7 @@ const App = () => {
 
     )
 
-}
+};
 
 
 
