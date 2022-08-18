@@ -5,7 +5,7 @@ import React, { useState, useEffect } from 'react';
 import Square from './tttComponents/Square';
 import '../css/TTTModal.css';
 
-function TTTModal({ closeModal }) {
+function TTTModal({ closeModal, openBtn }) {
 
     const [table, setTable] = useState(['', '', '', '', '', '', '', '', '']);
     const [player, setPlayer] = useState('O');
@@ -70,13 +70,18 @@ function TTTModal({ closeModal }) {
         setPlayer('O');
     };
 
+    const handleCloseTTTModal = () => {
+        closeModal(false)
+        openBtn(true)
+    }
+
     return (
 
         <div className='container tttContainer'>
             <div className='tttModalBg'>
 
                 <div className='tttCloseBtn '>
-                    <button onClick={() => closeModal(false)}><AiOutlineCloseCircle /></button>
+                    <button onClick={() => handleCloseTTTModal()}><AiOutlineCloseCircle /></button>
                 </div>
 
                 <h2>Tic Tac Toe</h2>

@@ -13,34 +13,52 @@ const Projects = () => {
   const [tttmodal, setTTTModal] = useState(false);
   const [task, setTask] = useState(false);
   const [weatherBtn, setWeatherBtn] = useState(false);
-
+  const [btn, setBtn] = useState(true);
+  
   const navigateToGhibliHome = () => {
     navigate('/GhibliHome');
   };
 
+  const handleTTTBtn = () => {
+    setTTTModal(true)
+    setBtn(false)
+  }
+
+  const handleTaskBtn = () => {
+    setTask(true)
+    setBtn(false)
+  }
+
+  const handleWeatherBtn = () => {
+    setWeatherBtn(true)
+    setBtn(false)
+  }
+
+
+
   return (
     <div className='projectsContainer' id='Projects'>
-      <div className='projectsTitle'>Projects</div>
+      <div className='projectsTitle'>PROJECTS</div>
 
+      <div className='projectsModalContent'>
 
-      
         <div className='projectsBtns'>
-          <button className='tttBtn' onClick={() => { setTTTModal(true) }}>Tic Tac Toe</button>
-          <button className='taskBtn' onClick={() => { setTask(true) }}>Task Compiler</button>
-          <button className='weatherBtn' onClick={() => { setWeatherBtn(true) }}>Weather App</button>
-          <button className='bootstrapBtn' onClick={navigateToGhibliHome}>Bootstrap Ghibli</button>
+          {btn && <button className='tttBtn' onClick={() => { handleTTTBtn()}}>Tic Tac Toe</button>} 
+          {btn && <button className='taskBtn' onClick={() => { handleTaskBtn() }}>Task Compiler</button>}
+          {btn && <button className='weatherBtn' onClick={() => { handleWeatherBtn() }}>Weather App</button>}
+          {btn && <button className='bootstrapBtn' onClick={navigateToGhibliHome}>Bootstrap Ghibli</button>}
         </div>
-        
+
         <div className='projectModals'>
-          <div className='ticTacToeDiv'>
-          {tttmodal && <TTTModal closeModal={setTTTModal} />}
-          </div>
-         
-          {task && <TaskModal closeModal={setTask} />}
-          {weatherBtn && <WeatherModal closeModal={setWeatherBtn} />}
+          {tttmodal && <TTTModal closeModal={setTTTModal} openBtn={setBtn} />}
+          {task && <TaskModal closeModal={setTask} openBtn={setBtn} />}
+          {weatherBtn && <WeatherModal closeModal={setWeatherBtn} openBtn={setBtn}/>}
         </div>
+      
       </div>
     
+    </div>
+
   )
 }
 

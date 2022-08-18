@@ -8,6 +8,8 @@ const MainNavbar = () => {
 
   const [scrollNav, setScrollNav] = useState(false);
   const [sidebar, setSidebar] = useState(false);
+  const [navIcon, setNavIcon] = useState(true);
+  const [ load, setLoad ] = useState(true)
 
   const changeNav = () => {
     if (window.scrollY >= 80) {
@@ -21,6 +23,10 @@ const MainNavbar = () => {
     window.addEventListener('scroll', changeNav)
   }, []);
 
+  const handleMobileIcon = () => {
+    setSidebar(true)
+    setNavIcon(false)
+  }
 
 
   return (
@@ -29,11 +35,11 @@ const MainNavbar = () => {
 
         <NavbarContainer>
 
-          <MobileIcon onClick={() => { setSidebar(true) }}>
+          {navIcon && <MobileIcon onClick={() => { handleMobileIcon() }}>
             <FaBars />
-          </MobileIcon>
+          </MobileIcon>}
 
-          {sidebar && <Sidebar CloseSidebar={setSidebar} />}
+          {sidebar && <Sidebar CloseSidebar={setSidebar} OpenNavIcon={setNavIcon} />}
 
           <NavMenu>
 

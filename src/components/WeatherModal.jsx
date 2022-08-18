@@ -6,7 +6,13 @@ import axios from "axios";
 import moment from "moment";
 
 
-function WeatherModal({ closeModal }) {
+function WeatherModal({ closeModal, openBtn }) {
+
+    const handleCloseWeatherModal = () => {
+        closeModal(false)
+        openBtn(true)
+    }
+
     const [data, setData] = useState({});
 
     const [location, setLocation] = useState('');
@@ -31,12 +37,12 @@ function WeatherModal({ closeModal }) {
                 <div className="topContainer">
 
                     <div className='weatherCloseBtn '>
-                        <button onClick={() => closeModal(false)}><AiOutlineCloseCircle /></button>
+                        <button onClick={() => handleCloseWeatherModal()}><AiOutlineCloseCircle /></button>
                     </div>
 
                     <div className="search">
                         <input value={location} onChange={e => setLocation(e.target.value)} type='text' placeholder="Location" onKeyPress={search} />
-                        <div className="day">{moment().format('MMMM Do YYYY, h:mm:ss a')}</div>
+                        <div className="day">{moment().format('MMMM Do YYYY, h:mm a')}</div>
                     </div>
                 </div>
 

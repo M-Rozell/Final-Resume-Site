@@ -1,5 +1,4 @@
 
-
 import { Link as LinkScroll } from 'react-scroll';
 import styled from 'styled-components';
 
@@ -81,9 +80,8 @@ appearance: button;
   color: #F7EF8A;
   cursor: pointer;
   display: inline-block;
-  /* font-family: ITCAvantGardeStd-Bk,Arial,sans-serif; */
+  font-family: 'Mingzat', sans-serif;
   font-size: .75rem;
-  /* font-weight: 400; */
   line-height: 20px;
   margin: 0 10px 10px 0;
   overflow: visible;

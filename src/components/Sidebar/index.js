@@ -1,41 +1,44 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { SidebarContainer, SidebarIcon, SidebarCloseIcon, SidebarWrapper, SidebarMenu, SidebarLink } from './SidebarElements'
 
-const Sidebar = ({ CloseSidebar }) => {
+const Sidebar = ({ CloseSidebar, OpenNavIcon }) => {
 
+    const handleSidebarMenu = () => {
+        CloseSidebar(false)
+        OpenNavIcon(true)
+    };
 
     return (
         <>
             <SidebarContainer >
 
-                <SidebarIcon onClick={() => CloseSidebar(false)}>
-                    <SidebarCloseIcon />
-                </SidebarIcon>
-
                 <SidebarWrapper>
 
                     <SidebarMenu>
-                        <SidebarLink to='Hero' onClick={() => CloseSidebar(false)}>Home</SidebarLink>
+                        <SidebarLink to='Hero' onClick={() => handleSidebarMenu()}>Home</SidebarLink>
                     </SidebarMenu>
 
                     <SidebarMenu>
-                        <SidebarLink to='About' onClick={() => CloseSidebar(false)}>About</SidebarLink>
+                        <SidebarLink to='About' onClick={() => handleSidebarMenu()}>About</SidebarLink>
                     </SidebarMenu>
 
                     <SidebarMenu>
-                        <SidebarLink to='Projects' onClick={() => CloseSidebar(false)}>Projects</SidebarLink>
+                        <SidebarLink to='Projects' onClick={() => handleSidebarMenu()}>Projects</SidebarLink>
                     </SidebarMenu>
 
 
                     <SidebarMenu>
-                        <SidebarLink to='Skills' onClick={() => CloseSidebar(false)}>Skills</SidebarLink>
+                        <SidebarLink to='Skills' onClick={() => handleSidebarMenu()}>Skills</SidebarLink>
                     </SidebarMenu>
 
+                    <SidebarIcon onClick={() => handleSidebarMenu()}>
+                        <SidebarCloseIcon />
+                    </SidebarIcon>
 
                 </SidebarWrapper>
             </SidebarContainer>
         </>
     )
-}
+};
 
 export default Sidebar;

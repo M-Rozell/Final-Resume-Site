@@ -1,27 +1,37 @@
-import React from 'react';
-import { HeroContainer, NameBox, NameP, NameP1, DetailsBg, DetailsP, HiBg, HiP, Im } from './HeroElements';
+import React, {useState} from 'react';
+import { HeroContainer, AnimationHeroWrapper, HeroWrapper, Top, Bottom, NameBox, NameP1, DetailsP, DetailsP2 } from './HeroElements';
+import Animation from '../StarAnimation/index'
+
 
 const HeroSection = () => {
+
   return (
     <HeroContainer id='Hero'>
       
-      <NameBox>
-        <HiBg>
-        <HiP>Hi there!</HiP>
-        <Im>I'm</Im>
-      </HiBg>
-        <NameP1>Maggie Rozell</NameP1>
-        {/* <NameP>Rozell</NameP> */}
-      </NameBox>
+      <AnimationHeroWrapper>
+      <Animation />
+      <HeroWrapper>
 
-      <DetailsBg>
-        <DetailsP>Web Designer</DetailsP>
-        <DetailsP>Full-Stack Developer</DetailsP>
-      </DetailsBg>
+        <Top>
+          <NameBox>
+            <NameP1 className="name fade-in-text">Maggie Rozell</NameP1>
+          </NameBox>
+        </Top>
+
+        <Bottom>
+          <DetailsP>Web Designer</DetailsP>
+          <DetailsP2>Full-Stack Developer</DetailsP2>
+        </Bottom>
+
+      </HeroWrapper>
       
-    
+      </AnimationHeroWrapper>
+      
+      
     </HeroContainer>
   )
-}
+};
 
 export default HeroSection;
+  
+
