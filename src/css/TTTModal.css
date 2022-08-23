@@ -16,6 +16,11 @@
     flex-direction: column;
 }
 
+.tttTitle {
+    color: aqua;
+    font-family: 'Mingzat', sans-serif;
+}
+
 .tRow {
     flex: 33%;
     display: flex;
@@ -25,17 +30,18 @@
 .square {
     flex: 33%;
     height: 100%;
-    border: 1px solid cornsilk;
+    border: 1px solid aqua;
     cursor: pointer;
     display: grid;
     place-items: center;
     font-size: 2rem;
     color: cornsilk;
     user-select: none;
+    font-family: 'Mingzat', sans-serif;
 }
 
 .square:active {
-    background-color: aqua;
+    background-color: black;
 }
 
 .tttCloseBtn {

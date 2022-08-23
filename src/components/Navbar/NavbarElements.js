@@ -49,11 +49,17 @@ display: none;
 
 export const CatIcon = styled.div`
 position: absolute;
-top: 10px;
-left: 0;
+top: 30px;
+left: 5px;
 color: cornsilk;
-font-size: 3rem;
+font-size: 2rem;
+z-index: 21;
+
+&:hover {
+color: aqua;
+}
 ` 
+
 
 export const NavMenu = styled.ul`
 display: flex;

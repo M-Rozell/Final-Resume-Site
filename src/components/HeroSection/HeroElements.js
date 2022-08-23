@@ -59,21 +59,8 @@ export const NameP1 = styled.p`
   position: relative;
   animation-name: ${fadeIn};
   animation-duration: 5s;
+
 `
-
-
-
-
-// export const VideoBg = styled.video`
-// width: 350px;
-// height: 600px;
-// background: #a84909;
-// border-radius: 50%;
-
-// -o-object-fit: cover;
-// object-fit: cover;
-// background: #232a34;
-// `
 
 export const Bottom = styled.div`
 position: relative;

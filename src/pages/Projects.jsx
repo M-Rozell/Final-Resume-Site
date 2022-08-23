@@ -1,11 +1,10 @@
 import WeatherModal from '../components/WeatherModal';
-import { TbArrowBigUpLines } from "react-icons/tb"
 import TaskModal from '../components/TaskModal';
 import { useNavigate } from 'react-router-dom';
 import TTTModal from '../components/TTTModal';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import '../css/BootstrapGhibli.css';
-import '../css/Projects.css'
+import '../css/Projects.css';
 
 const Projects = () => {
 
@@ -22,17 +21,17 @@ const Projects = () => {
   const handleTTTBtn = () => {
     setTTTModal(true)
     setBtn(false)
-  }
+  };
 
   const handleTaskBtn = () => {
     setTask(true)
     setBtn(false)
-  }
+  };
 
   const handleWeatherBtn = () => {
     setWeatherBtn(true)
     setBtn(false)
-  }
+  };
 
 
 
@@ -60,6 +59,6 @@ const Projects = () => {
     </div>
 
   )
-}
+};
 
 export default Projects

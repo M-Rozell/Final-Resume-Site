@@ -84,7 +84,7 @@ function TTTModal({ closeModal, openBtn }) {
                     <button onClick={() => handleCloseTTTModal()}><AiOutlineCloseCircle /></button>
                 </div>
 
-                <h2>Tic Tac Toe</h2>
+                <h2 className='tttTitle'>Tic Tac Toe</h2>
 
                 <div id="board" className=''>
 
