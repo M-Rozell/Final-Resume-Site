@@ -1,3 +1,4 @@
+
 import App from './App';
 import React from 'react';
 import ReactDom from 'react-dom/client';
@@ -8,4 +9,4 @@ root.render(
     <React.StrictMode>
         <App />
     </React.StrictMode>
-)
+);

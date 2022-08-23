@@ -1,7 +1,7 @@
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import MainHome from "./pages/MainHome";
 import React from 'react';
+import MainHome from "./pages/MainHome";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Films from "./components/ghibliComponents/Films";
 import People from "./components/ghibliComponents/People";
@@ -13,39 +13,37 @@ import PeopleDetails from './components/ghibliComponents/PeopleDetails';
 import VehicleDetails from './components/ghibliComponents/VehicleDetails';
 
 
-
 const App = () => {
-    
 
-    return  (
+    return (
 
         <BrowserRouter>
-        <Routes>
+            <Routes>
 
-            <Route path="/" element={<MainHome />} />
-
-            <Route path="/GhibliHome" element={<GhibliHome />} />
+                <Route path="/" element={<MainHome />} />
                 <Route path="/Films" element={<Films />} />
                 <Route path="/People" element={<People />} />
                 <Route path="/Vehicles" element={<Vehicles />} />
+                <Route path="/GhibliHome" element={<GhibliHome />} />
                 <Route path="/Films/:filmid" element={<FilmDetails />} />
-                <Route path="/People/:peopleid" element={<PeopleDetails />} />
-                <Route path="/Vehicles/:vehicleid" element={<VehicleDetails />} />
                 <Route path="/PeopleDetails" element={<PeopleDetails />} />
                 <Route path="/VehicleDetails" element={<VehicleDetails />} />
+                <Route path="/People/:peopleid" element={<PeopleDetails />} />
+                <Route path="/Vehicles/:vehicleid" element={<VehicleDetails />} />
                 <Route path="/PilotDetails/:peopleid" element={<PilotDetails />} />
-            
 
-        </Routes>
-    </BrowserRouter>
-
+            </Routes>
+        </BrowserRouter>
     )
-
 };
 
-
-
-
-
-
 export default App;
+
+
+
+
+
+
+
+
+

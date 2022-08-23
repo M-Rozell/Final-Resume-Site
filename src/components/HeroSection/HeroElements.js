@@ -1,6 +1,7 @@
 
 import styled, { keyframes } from 'styled-components';
 
+
 export const HeroContainer = styled.div`
     width: 100%;
     height: 100vh;
@@ -12,13 +13,13 @@ export const HeroContainer = styled.div`
     padding: 0;
     
 `
-export const AnimationHeroWrapper = styled.div`
+export const AnimationHeroWrapper = styled.section`
 position: relative;
 z-index: 4;
 overflow: hidden;
 `
 
-export const HeroWrapper = styled.div`
+export const HeroWrapper = styled.section`
 width: 100%;
 height: 100vh;
     position: absolute;
@@ -29,7 +30,7 @@ height: 100vh;
     text-align: center;
     justify-content: center;
     align-items: center;
-    z-index: 999;
+    z-index: 5;
 `
 
 
@@ -74,7 +75,7 @@ color: cornsilk;
 font-family: 'Mingzat', sans-serif;
 font-size: 1.5rem;
 animation-name: ${fadeIn};
-  animation-duration: 10s;
+animation-duration: 10s;
 `
 
 export const DetailsP2 = styled.p`
@@ -83,5 +84,55 @@ font-family: 'Mingzat', sans-serif;
 font-size: 1.5rem;
 margin-top: -10px;
 animation-name: ${fadeIn};
-  animation-duration: 10s;
+animation-duration: 10s;
+`
+
+export const LinkBtns = styled.div`
+position: relative;
+display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.25rem;
+  z-index: 6;
+`
+export const GitHub = styled.a`
+color: #9eaf92;
+  text-decoration: none;
+
+  &:visited {
+    color: #9eaf92;
+  }
+
+  &:hover {
+    color: cornsilk;
+  }
+`
+
+export const Email = styled.a`
+margin-left: 10px;
+  margin-right: 10px;
+  color: #9eaf92;
+  text-decoration: none;
+
+  &:visited {
+    color: #9eaf92;
+  }
+
+  &:hover {
+    color: cornsilk;
+  }
+`
+
+export const LinkedIn = styled.a`
+color: #9eaf92;
+  text-decoration: none;
+
+  &:visited {
+    color: #9eaf92;
+  }
+
+  &:hover {
+    color: cornsilk;
+  }
 `
