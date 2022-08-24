@@ -1,21 +1,29 @@
 
 import styled, { keyframes } from 'styled-components';
+import HeroImage from "../../images/HeroImage.jpg"
 
 
 export const HeroContainer = styled.div`
     width: 100%;
     height: 100vh;
-    background-color: #417173;
+    background-image: url(${HeroImage});
+    background-repeat: no-repeat;
+    background-position: center center fixed;
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+    /* background-color: #417173; */
     /* background-color: #d38db3; */
-    border-left: 5px solid #4a6961;
-    border-right: 5px solid #4a6961;
+    border-left: 2px solid cornsilk;
+    border-right: 2px solid cornsilk;
     margin: 0;
     padding: 0;
     
 `
 export const AnimationHeroWrapper = styled.section`
 position: relative;
-z-index: 4;
+/* z-index: 4; */
 overflow: hidden;
 `
 
@@ -30,7 +38,7 @@ height: 100vh;
     text-align: center;
     justify-content: center;
     align-items: center;
-    z-index: 5;
+    /* z-index: 5; */
 `
 
 
@@ -56,11 +64,23 @@ export const NameP1 = styled.p`
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: 'Rampart One', cursive;
-  font-size: 5.5rem;
+  /* font-size: 5.5rem; */
+  
   position: relative;
   animation-name: ${fadeIn};
   animation-duration: 5s;
 
+  @media screen and (max-width: 1920px) {
+    font-size: 8rem;
+}
+
+  @media screen and (max-width: 768px) {
+    font-size: 5.5rem;
+}
+
+@media screen and (max-width: 280px) {
+        font-size: 4rem;
+    }
 `
 
 export const Bottom = styled.div`
@@ -94,7 +114,7 @@ display: flex;
   align-items: center;
   text-align: center;
   font-size: 1.25rem;
-  z-index: 6;
+  /* z-index: 6; */
 `
 export const GitHub = styled.a`
 color: #9eaf92;

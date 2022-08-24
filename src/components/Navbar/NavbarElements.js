@@ -6,8 +6,8 @@ import styled from 'styled-components';
 
 export const Nav = styled.nav`
 width: 100%;
-background: ${({scrollNav}) => (scrollNav ? 'transparent' : '#dfb255')};
-border: ${({scrollNav}) => (scrollNav ? 'transparent' : "3px solid #4a6961")};
+background: ${({scrollNav}) => (scrollNav ? 'transparent' : 'rgb(40, 40, 40, 0.6)')};
+border: ${({scrollNav}) => (scrollNav ? 'transparent' : "1px solid cornsilk")};
 height: 70px;
 margin-top: -70px;
 display: flex;
@@ -50,7 +50,7 @@ display: none;
 
 export const CatIcon = styled.div`
 position: absolute;
-top: 30px;
+top: 33px;
 left: 5px;
 color: cornsilk;
 font-size: 2rem;

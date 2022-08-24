@@ -7,7 +7,7 @@
   width: 100%;
   height: 100vh;
   position: relative;
-  background-image: url("../images/Dunes.jpg");
+  background-image: url("../images/Ice.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -20,7 +20,8 @@
   font-family: 'Zen Old Mincho', serif;
   top: 55px;
   margin-left: 5px;
-  font-size: 6rem;
+  /* font-size: 6rem; */
+  font-size: clamp(3rem, 10vw, 8rem);
   z-index: 3;
 }
 
@@ -37,8 +38,9 @@
 .objective {
   border-radius: 5px;
   padding: 20px;
-  background-color: rgba(116, 123, 139, 0.4);
-  box-shadow: rgba(46, 46, 46, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  /* background-color: #93986fca; */
+  
+  box-shadow: rgba(251, 250, 250, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
 .pObjective {
@@ -96,4 +98,5 @@
 }
 
 
-
+/* filter: blur(8px);
+  -webkit-filter: blur(8px); */

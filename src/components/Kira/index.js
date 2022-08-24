@@ -1,24 +1,31 @@
 
 import React, { useState } from 'react';
 import Video from '../../video/KiraTrim.mp4'
-import { VideoContainer, VideoWrapper, VideoBg, KiraVideo } from './KiraElements';
-
+import { VideoContainer, VideoWrapper, VideoAnimationWrapper, KiraFrame, VideoBg, KiraVideo } from './KiraElements';
+import Animation from '../StarAnimation';
 
 const Kira = () => {
 
-   
+
 
     return (
         <>
-             <VideoContainer id="KV" >
+            <VideoContainer id="KV" >
+                <VideoAnimationWrapper>
+                    <Animation />
 
-                <VideoWrapper>
-                </VideoWrapper>
 
-                <VideoBg>
-                    <KiraVideo autoPlay loop muted src={Video} type='video/mp4' />
-                </VideoBg>
 
+                    <VideoWrapper>
+                        
+                           <VideoBg> 
+                            <KiraFrame></KiraFrame>
+                                <KiraVideo autoPlay loop muted src={Video} type='video/mp4' />
+                        </VideoBg>    
+                        
+                    </VideoWrapper>
+
+                </VideoAnimationWrapper>
             </VideoContainer>
         </>
     )

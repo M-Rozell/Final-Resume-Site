@@ -11,8 +11,8 @@ const HeroSection = () => {
   return (
     <HeroContainer id='Hero'>
 
-      <AnimationHeroWrapper>
-        <Animation />
+      {/* <AnimationHeroWrapper> */}
+        {/* <Animation /> */}
         <HeroWrapper>
 
           <Top>
@@ -35,7 +35,7 @@ const HeroSection = () => {
         </HeroWrapper>
 
 
-      </AnimationHeroWrapper>
+      {/* </AnimationHeroWrapper> */}
 
 
 
