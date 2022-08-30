@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 import ScrollingSkills from '../components/ScrollingSkills';
 import ToTop from '../components/Totop';
-import '../css/Skills.css'
+import '../css/Skills.css';
 
 const Skills = () => {
 
@@ -11,24 +11,24 @@ const Skills = () => {
 
     <div className='skillsContainer' id='Skills'>
 
-      <div className='skillsTitle'>Skills</div>
-<div className='justTryContainer'>
-      <div className='justTry'>
+      <div className='skillsTitle rotate'>Skills</div>
+      <div className='justTryContainer'>
+        <div className='justTry'>
 
-        <ScrollingSkills />
+          <ScrollingSkills />
 
-      </div>
+        </div>
       </div>
       <div className='bottomArrow'>
         <ToTop />
       </div>
-    
+
     </div>
 
 
 
   )
-}
+};
 
 export default Skills;
 

@@ -17,9 +17,31 @@
     flex-direction: column;
 }
 
+@media screen and (min-width: 768px) {
+    #board {
+        width: 500px;
+        height: 500px;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    #board {
+        width: 275px;
+        height: 275px;
+
+    }
+}
+
 .tttTitle {
     color: rgb(40, 40, 40, 0.8);
     font-family: 'Bakbak One', sans-serif;
+    font-size: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+    .tttTitle {
+        font-size: 4rem;
+    }
 }
 
 .tRow {
@@ -39,7 +61,14 @@
     color: cornsilk;
     user-select: none;
     font-family: 'Play', sans-serif;
-  font-weight: 400;
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+    .square {
+        font-size: 4rem;
+    }
 }
 
 .square:active {

@@ -53,6 +53,13 @@ justify-content: center;
 border: .25px solid cornsilk;
 }
 
+/* @media  screen and (max-width: 1080px) {
+  .resume {
+    max-width: 1078;
+  }
+  
+} */
+
 .objective {
   margin: 0;
   border-radius: 5px;
@@ -60,7 +67,6 @@ border: .25px solid cornsilk;
   /* background-color: #93986fca; */
   border: .35px solid cornsilk;
   border-style: dashed;
-
 }
 
 .pObjective {
