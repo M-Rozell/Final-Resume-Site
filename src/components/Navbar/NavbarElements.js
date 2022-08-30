@@ -6,7 +6,7 @@ import styled from 'styled-components';
 
 export const Nav = styled.nav`
 width: 100%;
-background: ${({scrollNav}) => (scrollNav ? 'transparent' : 'rgb(40, 40, 40, 0.6)')};
+background: ${({scrollNav}) => (scrollNav ? 'transparent' : 'rgb(40, 40, 40, 0.65)')};
 border: ${({scrollNav}) => (scrollNav ? 'transparent' : "1px solid cornsilk")};
 height: 70px;
 margin-top: -70px;
@@ -86,19 +86,21 @@ align-items: center;
 export const NavLinks = styled(LinkScroll)`
 
 appearance: button;
-  background-color: #417173;
+  /* background-color: #417173; */
+  background-color: rgb(40, 40, 40, 0.6);
   background-image: none;
   border: 1px solid #F7EF8A;
-  border-radius: 4px;
+  border-radius: 2px;
   box-shadow: cornsilk 4px 4px 0 0, #F7EF8A 4px 4px 0 1px;
   box-sizing: border-box;
   color: #F7EF8A;
   cursor: pointer;
   display: inline-block;
-  font-family: 'Mingzat', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
   font-size: .75rem;
   line-height: 20px;
-  margin: 0 10px 10px 0;
+  margin: 0 30px 10px 0;
   overflow: visible;
   text-align: center;
   text-transform: none;
@@ -110,15 +112,12 @@ appearance: button;
   white-space: nowrap;
   /* padding: 5px 12px; */
 
-
-
-
 &:focus {
-  outline: none !important;
+  /* outline: none !important; */
   text-decoration: none;
   color: cornsilk;
   border-color: cornsilk;
-  box-shadow: 4px 4px 0 1px cornsilk;
+  /* box-shadow: 4px 4px 0 1px cornsilk; */
 }
 
 &:hover {
@@ -127,13 +126,11 @@ appearance: button;
 }
 
 &:active {
-    
   box-shadow: rgba(0, 0, 0, .125) 0 3px 5px inset;
   outline: 0;
 }
 
 &:not([disabled]):active {
-    
   box-shadow: cornsilk 2px 2px 0 0, #F7EF8A 2px 2px 0 1px;
   transform: translate(2px, 2px);
 }
@@ -143,3 +140,5 @@ appearance: button;
   
 }
 `
+
+

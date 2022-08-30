@@ -49,4 +49,42 @@
     z-index: 3;
   }
 
+
+.arrowBtn {
+    color: cornsilk;
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    animation: movebtn 3s linear infinite;
+    transition: all .5s ease-in-out;
+}
+
+.arrowBtn:hover {
+    animation: none;
+    color: aqua;
+}
+
+@keyframes movebtn {
+    0% {
+        transform: translateY(0px);
+    }
+
+    25% {
+        transform: translateY(10px);
+    }
+
+    50% {
+        transform: translateY(0px);
+    }
+
+    75% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
  

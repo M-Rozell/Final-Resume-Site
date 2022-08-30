@@ -1,53 +1,52 @@
 
 import styled, { keyframes } from 'styled-components';
-import HeroImage from "../../images/HeroImage.jpg"
+import HeroImage from "../../images/HeroImageTrees.jpg"
 
 
 export const HeroContainer = styled.div`
     width: 100%;
     height: 100vh;
-    background-image: url(${HeroImage});
-    background-repeat: no-repeat;
+    background-image: url(${HeroImage}) ;
+  background-repeat: no-repeat;
     background-position: center center fixed;
-    -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+    /* -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover; */
+    background-size: cover;
     /* background-color: #417173; */
     /* background-color: #d38db3; */
     border-left: 2px solid cornsilk;
     border-right: 2px solid cornsilk;
     margin: 0;
     padding: 0;
+`
     
-`
-export const AnimationHeroWrapper = styled.section`
-position: relative;
-/* z-index: 4; */
-overflow: hidden;
-`
-
 export const HeroWrapper = styled.section`
 width: 100%;
 height: 100vh;
     position: absolute;
     top: 0;
     left: 0;
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     text-align: center;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     /* z-index: 5; */
 `
-
+export const TextWrapper = styled.div`
+margin: 0;
+padding: 0;
+/* box-shadow: rgba(0, 0, 0, 0.9) 0px 4px 12px; */
+`
 
 export const Top = styled.div`
   text-align: center;
 `
 
 export const NameBox = styled.div`
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
+  
 `
 const fadeIn = keyframes`
   0% {
@@ -58,30 +57,49 @@ const fadeIn = keyframes`
     opacity: 1;
   }
 `
+
 export const NameP1 = styled.p`
-  margin: auto;
-  background: -webkit-linear-gradient(#AE8625, #F7EF8A, #D2AC47);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-family: 'Rampart One', cursive;
-  /* font-size: 5.5rem; */
-  
-  position: relative;
-  animation-name: ${fadeIn};
-  animation-duration: 5s;
+position: absolute;
+color: #F7EF8A;
+/* color: cornsilk; */
+font-family: 'IM Fell Great Primer SC', serif;
+font-size: 2rem;
+  bottom: 20px;
+  left: 20px;
 
-  @media screen and (max-width: 1920px) {
-    font-size: 8rem;
+@media screen and (min-width: 768px) {
+  font-size: 3rem;
 }
 
-  @media screen and (max-width: 768px) {
-    font-size: 5.5rem;
-}
-
-@media screen and (max-width: 280px) {
-        font-size: 4rem;
-    }
 `
+// export const NameP1 = styled.p`
+//   margin: auto;
+//   background: -webkit-linear-gradient(#AE8625, #F7EF8A, #D2AC47);
+//   -webkit-background-clip: text;
+//   -webkit-text-fill-color: transparent;
+//   font-family: 'Rampart One', cursive;
+//   /* font-size: 5.5rem; */
+  
+//   position: relative;
+//   animation-name: ${fadeIn};
+//   animation-duration: 5s;
+
+//   @media screen and (max-width: 1920px) {
+//     font-size: 8rem;
+// }
+
+// @media screen and (max-width: 1000px) {
+//     font-size: 7rem;
+// }
+
+//   @media screen and (max-width: 768px) {
+//     font-size: 5.5rem;
+// }
+
+// @media screen and (max-width: 280px) {
+//         font-size: 4rem;
+//     }
+// `
 
 export const Bottom = styled.div`
 position: relative;
@@ -91,7 +109,8 @@ text-align: center;
 `
 
 export const DetailsP = styled.p`
-color: cornsilk;
+color: #F7EF8A;
+/* background-color: rgb(40, 40, 40, 0.6); */
 font-family: 'Mingzat', sans-serif;
 font-size: 1.5rem;
 animation-name: ${fadeIn};
@@ -99,7 +118,8 @@ animation-duration: 10s;
 `
 
 export const DetailsP2 = styled.p`
-color: cornsilk;
+color: #F7EF8A;
+/* background-color: rgb(40, 40, 40, 0.6); */
 font-family: 'Mingzat', sans-serif;
 font-size: 1.5rem;
 margin-top: -10px;

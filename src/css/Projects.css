@@ -4,8 +4,7 @@
     position: relative;
     margin: 0;
     padding: 0;
-    background-image: url("../images/Dark.jpg");
-    background-position: center;
+    background-image: url("../images/concrete.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -15,7 +14,8 @@
     font-family: 'Figtree', sans-serif;
     position: relative;
     color: cornsilk;
-    font-family: 'Zen Old Mincho', serif;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 800;
     top: 50px;
     margin-left: 5px;
     /* font-size: 4rem; */
@@ -30,7 +30,7 @@
     display: flex;
     flex-direction: column;
     margin-top: 100px;
-    margin-left: 5px;
+    margin-left: 10px;
 }
 
 .projectModals {
@@ -49,90 +49,73 @@
 .tttBtn {
     background: transparent;
     color: cornsilk;
-    border: 1px solid aqua;
-    border-radius: 8px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 600;
+    border: 1px solid cornsilk;
+    border-radius: 5px;
     padding: .15rem .5rem;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgb(40, 40, 40, 0.6);
     margin-top: 10px;
+}
+
+.tttBtn:hover {
+    color: #F7EF8A;
+    border: 1px solid #F7EF8A;
+    transform: scale(1.1);
 }
 
 .taskBtn {
     background: transparent;
     color: cornsilk;
-    border: 1px solid aqua;
-    border-radius: 8px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 600;
+    border: 1px solid cornsilk;
+    border-radius: 5px;
     padding: .15rem .5rem;
-    background-color: rgba(255, 255, 255, 0.1);
+     background-color: rgb(40, 40, 40, 0.6);
     margin-top: 10px;
+}
+
+.taskBtn:hover {
+    color: #F7EF8A;
+    border: 1px solid #F7EF8A;
+    transform: scale(1.1);
 }
 
 .weatherBtn {
     background: transparent;
     color: cornsilk;
-    border: 1px solid aqua;
-    border-radius: 8px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 600;
+    border: 1px solid cornsilk;
+    border-radius: 5px;
     padding: .15rem .5rem;
-    background-color: rgba(255, 255, 255, 0.1);
+     background-color: rgb(40, 40, 40, 0.6);
     margin-top: 10px;
+}
+
+.weatherBtn:hover {
+    color: #F7EF8A;
+    border: 1px solid #F7EF8A;
+    transform: scale(1.1);
 }
 
 .bootstrapBtn {
     background: transparent;
     color: cornsilk;
-    border: 1px solid aqua;
-    border-radius: 8px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 600;
+    border: 1px solid cornsilk;
+    border-radius: 5px;
     padding: .15rem .5rem;
-    background-color: rgba(255, 255, 255, 0.1);
+     background-color: rgb(40, 40, 40, 0.6);
     margin-top: 10px;
 }
 
-
-.arrowUp {
-    position: relative;
-    display: flex;
-    
+.bootstrapBtn:hover {
+    color: #F7EF8A;
+    border: 1px solid #F7EF8A;
+    transform: scale(1.1);
 }
 
-.icon-position {
-    position: relative;
-    bottom: 30px;
-    right: 25px;
-   
-}
 
-.arrowBtn {
-    color: cornsilk;
-    background: transparent;
-    border: none;
-    font-size: 2rem;
-    cursor: pointer;
-    animation: movebtn 3s linear infinite;
-    transition: all .5s ease-in-out;
-}
-
-.arrowBtn:hover {
-    animation: none;
-    color: aqua;
-}
-
-@keyframes movebtn {
-    0% {
-        transform: translateY(0px);
-    }
-
-    25% {
-        transform: translateY(10px);
-    }
-
-    50% {
-        transform: translateY(0px);
-    }
-
-    75% {
-        transform: translateY(-10px);
-    }
-
-    100% {
-        transform: translateY(0px);
-    }
-}

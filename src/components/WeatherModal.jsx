@@ -31,14 +31,15 @@ function WeatherModal({ closeModal, openBtn }) {
 
     return (
         <div className="weatherAppContainer">
+            
             <div className="weatherApp">
-                
+                <div className='weatherCloseBtn '>
+                        <button onClick={() => handleCloseWeatherModal()}><AiOutlineCloseCircle /></button>
+                    </div>
                 
                 <div className="topContainer">
 
-                    <div className='weatherCloseBtn '>
-                        <button onClick={() => handleCloseWeatherModal()}><AiOutlineCloseCircle /></button>
-                    </div>
+                    
 
                     <div className="search">
                         <input value={location} onChange={e => setLocation(e.target.value)} type='text' placeholder="Location" onKeyPress={search} />

@@ -5,9 +5,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: auto;
     margin-top: 40px;
-    
     padding: 10px;
     position: relative;
     /* border: 1px solid cornsilk; */
@@ -18,7 +16,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: auto;
     justify-content: space-between;
     background: url('../images/bellingrath-gardens-alabama-landscapeTwo.jpg') no-repeat center center/cover;
     padding: 20px;
@@ -46,7 +43,7 @@
 .tempHone {
     font-size: 5rem;
     font-family: 'Roboto', sans-serif;
-    font-weight: 800;
+    font-weight: 700;
 }
 
 
@@ -93,7 +90,7 @@
     padding: 5px 8px;
     border-radius: 8px;
     border: 1px solid rgba(255, 255, 255, 0.8);
-    background: rgba(255, 255, 255, 0.2);
+    background: rgb(40, 40, 40, 0.5);
     color: cornsilk;
 }
 
@@ -128,7 +125,7 @@
     text-align: center;
     width: 100%;
     border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.2);
+    background: rgb(40, 40, 40, 0.5);
     border: 1px solid rgba(255, 255, 255, 0.8);
     padding: 5px;
     margin-bottom: 10px;
@@ -151,8 +148,10 @@
 }
 
 .weatherCloseBtn {
-    display: flex;
-    justify-content: flex-end;
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    z-index: 1;
 }
 
 .weatherCloseBtn button {
@@ -161,5 +160,5 @@
     font-size: 1rem;
     cursor: pointer;
     color: cornsilk;
-    margin-top: 5px;
+    
 }

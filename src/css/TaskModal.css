@@ -16,13 +16,12 @@
 .taskCompiler {
   margin-bottom: 5px;
   text-align: center;
-  font-family: 'Play', sans-serif;
-  font-weight: 700;
-  color: aqua
+  font-family: 'Bakbak One', sans-serif;
+  color: rgb(40, 40, 40, 0.8);
 }
 
 .horizontalLine {
-  border-color: aqua;
+  border-color: rgb(40, 40, 40, 0.8);
   width: 55vw;
 }
 
@@ -39,16 +38,16 @@
   margin-top: 5px;
   margin-bottom: 20px;
   padding: .5rem .5rem .5rem .5rem;
-  border: 2px solid aqua;
-  background: transparent;
+  border: 2px solid rgb(40, 40, 40, 0.8);
+  background: rgb(40, 40, 40, 0.5);
   /* width: 70vw; */
-  color: aqua;
+  color: #F7EF8A;
   font-family: 'Play', sans-serif;
   font-weight: 400;
 }
 
 ::placeholder {
-  color: azure;
+  color: cornsilk;
   font-family: 'Play', sans-serif;
   font-weight: 400;
 }
@@ -69,10 +68,10 @@
   margin: auto;
   margin-top: 10px;
   padding: .5rem .5rem .5rem .5rem;
-  border: 2px solid aqua;
-  background: transparent;
+  border: 2px solid rgb(40, 40, 40, 0.8);
+  background: rgb(40, 40, 40, 0.5);
   /* width: 70vw; */
-  color: aqua;
+  color: #F7EF8A;
   font-family: 'Play', sans-serif;
   font-weight: 400;
 }
@@ -95,10 +94,10 @@
   margin: auto;
   margin-top: 10px;
   padding: .3rem .5rem .3rem .5rem;
-  border: 2px solid aqua;
-  background: transparent;
+  border: 2px solid rgb(40, 40, 40, 0.8);
+  background: rgb(40, 40, 40, 0.5);
   /* width: 70vw; */
-  color: aqua;
+  color: #F7EF8A;
   cursor: pointer;
   font-family: 'Play', sans-serif;
   font-weight: 400;
@@ -118,11 +117,11 @@
 
 .editIcon {
   margin-right: 7px;
-  color: aqua;
+  color: #F7EF8A;
 }
 
 .removeIcon {
-  color: aqua;
+  color: #F7EF8A;
 }
 
 .taskCloseBtn {
@@ -135,5 +134,5 @@
   border: none;
   font-size: 1rem;
   cursor: pointer;
-  color: cornsilk;
+  color: rgb(40, 40, 40, 0.8);
 }

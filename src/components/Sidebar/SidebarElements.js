@@ -8,12 +8,12 @@ position: fixed;
 margin: 0;
 padding: 0;
 z-index: 999;
-width: 325px;
+width: 350px;
 height: 50px;
 background: transparent;
 /* background-image: radial-gradient( #dfb255,#ddad0b ); */
 border-radius: 8px;
-box-shadow: 0 0 2px 2px #f0f9db;
+/* box-shadow: 0 0 2px 2px #f0f9db; */
 display: flex;
 align-items: center;
 text-align: center;

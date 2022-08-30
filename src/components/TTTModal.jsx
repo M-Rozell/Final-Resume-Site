@@ -23,8 +23,10 @@ function TTTModal({ closeModal, openBtn }) {
 
     useEffect(() => {
         if (result.state !== 'none') {
-            alert(`${result.winner} has won!!`);
-            restartGame();
+            setTimeout(() => {
+                alert(`${result.winner} has won!!`);
+                restartGame();
+            }, 100)
         }
     }, [result]);
 
