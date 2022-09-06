@@ -11,14 +11,14 @@ const Skills = () => {
 
     <div className='skillsContainer' id='Skills'>
 
-      <div className='skillsTitle rotate'>Skills</div>
-      <div className='justTryContainer'>
+      <div className='skillsTitle' id='rotate'>Skills</div>
+      {/* <div className='justTryContainer'>
         <div className='justTry'>
 
           <ScrollingSkills />
 
         </div>
-      </div>
+      </div> */}
       <div className='bottomArrow'>
         <ToTop />
       </div>

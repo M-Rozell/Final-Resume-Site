@@ -8,7 +8,7 @@ position: fixed;
 margin: 0;
 padding: 0;
 z-index: 999;
-width: 350px;
+width: 275px;
 height: 50px;
 background: transparent;
 /* background-image: radial-gradient( #dfb255,#ddad0b ); */
@@ -19,14 +19,15 @@ align-items: center;
 text-align: center;
 justify-content: center;
 top: 10px;
-right: 20px;
+right: 10px;
 
 @media screen and (min-width: 768px){
     display: none;
 }
 
-@media screen and (max-width: 393px){
-    width: 280px
+@media screen and (min-width: 281px){
+    width: 350px;
+    right: 20px;
 }
 `
 export const SidebarWrapper = styled.div`
@@ -66,5 +67,9 @@ cursor: pointer;
 
 &:hover {
     color: #f56036;
+}
+
+@media screen and (min-width: 281px) {
+    font-size: 1.2rem;
 }
 `

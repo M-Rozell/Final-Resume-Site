@@ -58,6 +58,7 @@ z-index: 21;
 
 &:hover {
 color: aqua;
+cursor: pointer;
 }
 ` 
 

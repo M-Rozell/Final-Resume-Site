@@ -1,6 +1,6 @@
 
 import { WinningCells } from './tttComponents/WinningCells';
-import { AiOutlineCloseCircle } from 'react-icons/ai';
+import { AiFillCloseCircle } from 'react-icons/ai';
 import React, { useState, useEffect } from 'react';
 import Square from './tttComponents/Square';
 import '../css/TTTModal.css';
@@ -83,7 +83,7 @@ function TTTModal({ closeModal, openBtn }) {
             <div className='tttModalBg'>
 
                 <div className='tttCloseBtn '>
-                    <button onClick={() => handleCloseTTTModal()}><AiOutlineCloseCircle /></button>
+                    <button onClick={() => handleCloseTTTModal()}><AiFillCloseCircle /></button>
                 </div>
 
                 <h2 className='tttTitle'>Tic Tac Toe</h2>
