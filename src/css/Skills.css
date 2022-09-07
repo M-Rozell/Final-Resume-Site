@@ -9,6 +9,7 @@
     margin: auto;
     background-image: url("../images/Nsnap4.jpg");
     background-size: cover;
+    overflow: hidden;
   }
 
   .skillsTitle {
@@ -32,7 +33,7 @@
   @media screen and (min-width: 768px) {
     #rotate {
       position: absolute;
-      font-size: 15rem;
+      font-size: 14rem;
       margin: 0;
       padding: 0;
       top: 50%;
@@ -55,10 +56,24 @@
   .justTry {
     position: relative;
     width: 278px;
-    height: 500px;
-    border: 2px solid black;
+    height: 400px;
+    border: 2px solid cornsilk;
     overflow: hidden; 
     overscroll-behavior: contain;
+  }
+
+  @media screen and (min-width: 377px) {
+    .justTry {
+      width: 300px;
+      height: 500px;
+      }
+  }
+
+  @media screen and (min-width: 768px) {
+    .justTry {
+      width: 400px;
+      height: 80vh;
+    }
   }
 
   .bottomArrow {

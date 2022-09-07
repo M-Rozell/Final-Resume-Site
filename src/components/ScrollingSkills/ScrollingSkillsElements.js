@@ -10,6 +10,7 @@ export const ScrollingSkillsContainer = styled.div`
     display: flex;
 `
 export const ScrollBox = styled.div`
+width: 100%;
   background: linear-gradient(#f56036 1px, #ddad0b 1px);
   background-size: 100% 10px;
   box-sizing: border-box;
