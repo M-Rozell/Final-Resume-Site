@@ -12,6 +12,7 @@ const Skills = () => {
     <div className='skillsContainer' id='Skills'>
 
       <div className='skillsTitle' id='rotate'>Skills</div>
+      
       <div className='justTryContainer'>
         <div className='justTry'>
 
@@ -19,6 +20,8 @@ const Skills = () => {
 
         </div>
       </div>
+      
+      <div className='skillsTitleTwo' id='rotateTwo'>Skills</div>
       <div className='bottomArrow'>
         <ToTop />
       </div>

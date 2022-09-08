@@ -24,8 +24,10 @@ z-index:20;
 `
 
 export const NavbarContainer = styled.div`
+position: relative;
 display: flex;
-justify-content: space-between;
+justify-content: center;
+top: 15%;
 height: 70px;
 z-index: 1;
 width: 100%;
@@ -39,7 +41,7 @@ display: none;
 @media screen and (max-width: 768px) {
     display: block;
     position: absolute;
-    top: 0;
+    top: -15%;
     right: 0;
     transform: translate(-100%, 15%);
     font-size: 1.8rem;
@@ -68,9 +70,9 @@ display: flex;
 align-items: center;
 list-style: none;
 text-align: center;
-top: 0;
-right: 20px;
-position: absolute;
+/* top: 0; */
+/* right: 20px;
+position: absolute; */
 
 @media screen and (max-width: 768px) {
     display: none;
