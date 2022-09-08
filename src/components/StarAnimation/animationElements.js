@@ -1,5 +1,5 @@
+
 import styled from "styled-components";
-import { motion } from "framer-motion";
 
 
 export const AnimationContainer = styled.div`
@@ -46,7 +46,6 @@ z-index: 2;
 export const UlAnimation = styled.ul`
 list-style-type: none;
 position: relative;
-
 margin: 0;
 padding: 0;
 background: transparent;

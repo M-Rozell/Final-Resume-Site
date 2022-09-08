@@ -40,7 +40,7 @@ const MainHome = () => {
 
   return (
     <>
-      <MainNavbar />
+      <MainNavbar CloseKiraVideo={setOpenKira}/>
 
       {cat && <CatIcon onClick={() => { setOpenKira(true) }} >
         <GiHollowCat onClick={() => { scrollDownVideo() }} />
@@ -51,7 +51,7 @@ const MainHome = () => {
       <Projects />
       <Skills />
       <div ref={videoSection}>
-        {openKira && <Kira ></Kira>}
+        {openKira && <Kira></Kira>}
       </div>
     </>
   )

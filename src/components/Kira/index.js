@@ -6,23 +6,19 @@ import Animation from '../StarAnimation';
 
 const Kira = () => {
 
-
-
     return (
         <>
             <VideoContainer id="KV" >
                 <VideoAnimationWrapper>
                     <Animation />
 
-
-
                     <VideoWrapper>
-                        
-                           <VideoBg> 
+
+                        <VideoBg>
                             <KiraFrame></KiraFrame>
-                                <KiraVideo autoPlay loop muted src={Video} type='video/mp4' />
-                        </VideoBg>    
-                        
+                            <KiraVideo autoPlay loop muted src={Video} type='video/mp4' />
+                        </VideoBg>
+
                     </VideoWrapper>
 
                 </VideoAnimationWrapper>

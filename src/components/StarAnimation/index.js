@@ -1,26 +1,19 @@
-import React, {useState, useEffect} from "react";
-import { AnimationContainer, AnimationOneWrapper, AnimationTwoWrapper, AnimationThreeWrapper } from "./animationElements";
-import { motion} from "framer-motion";
 
-import FirstStyle from "./FirstStyle/FirstStyle";
+import React from "react";
+import { AnimationContainer, AnimationOneWrapper, AnimationTwoWrapper, AnimationThreeWrapper } from "./animationElements";
 import FirstStyleList from './FirstStyle/FirstStyleList';
 import SecondStyleList from "./SecondStyle/SecondStyleList";
 import ThirdStyleList from './ThirdStyle/ThirdStyleList';
 
 
-
-
 const Animation = () => {
-
-    
 
     return (
 
         <AnimationContainer>
 
-
             <AnimationOneWrapper>
-                 <FirstStyleList />
+                <FirstStyleList />
             </AnimationOneWrapper>
 
             <AnimationTwoWrapper>
@@ -31,15 +24,8 @@ const Animation = () => {
                 <ThirdStyleList />
             </AnimationThreeWrapper>
 
-
-
-
-
         </AnimationContainer>
-
     )
-
-
-}
+};
 
 export default Animation;

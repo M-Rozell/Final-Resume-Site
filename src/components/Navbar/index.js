@@ -7,11 +7,12 @@ import { GiHollowCat} from 'react-icons/gi';
 
 
 
-const MainNavbar = () => {
+const MainNavbar = ({CloseKiraVideo}) => {
 
   const [scrollNav, setScrollNav] = useState(false);
   const [sidebar, setSidebar] = useState(false);
   const [navIcon, setNavIcon] = useState(true);
+  
   
   
 
@@ -36,6 +37,7 @@ const MainNavbar = () => {
     setNavIcon(false)
   }
 
+  
 
 
  return (
@@ -53,16 +55,16 @@ const MainNavbar = () => {
           <NavMenu>
 
             <NavItem>
-              <NavLinks to="Hero">Home</NavLinks>
+              <NavLinks to="Hero" onClick={() => {CloseKiraVideo()}}>Home</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="About">About</NavLinks>
+              <NavLinks to="About" onClick={() => {CloseKiraVideo()}}>About</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="Projects">Projects</NavLinks>
+              <NavLinks to="Projects" onClick={() => {CloseKiraVideo()}}>Projects</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="Skills">Skills</NavLinks>
+              <NavLinks to="Skills" onClick={() => {CloseKiraVideo()}}>Skills</NavLinks>
             </NavItem>
 
           </NavMenu>

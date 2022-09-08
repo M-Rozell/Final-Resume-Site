@@ -7,7 +7,7 @@ height: 100vh;
 margin: 0;
 padding: 0;
 position: relative;
-background-color: aquamarine;
+background-color: black;
 
 `
 export const VideoAnimationWrapper = styled.div`
@@ -20,7 +20,7 @@ export const VideoWrapper = styled.div`
 width: 100%;
 height: 100vh;
     position: absolute;
-    top: 0;
+    top: 2%;
     left: 0;
     display: flex;
     flex-direction: column;

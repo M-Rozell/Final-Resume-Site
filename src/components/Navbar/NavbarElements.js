@@ -83,13 +83,11 @@ export const NavItem = styled.li`
 height: 80px;
 display: flex;
 align-items: center;
-
 `
 
 export const NavLinks = styled(LinkScroll)`
 
-appearance: button;
-  /* background-color: #417173; */
+  appearance: button;
   background-color: rgb(40, 40, 40, 0.6);
   background-image: none;
   border: 1px solid #F7EF8A;
