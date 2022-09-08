@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import Video from '../../video/KiraTrim.mp4'
 import { VideoContainer, VideoWrapper, VideoAnimationWrapper, KiraFrame, VideoBg, KiraVideo } from './KiraElements';
 import Animation from '../StarAnimation';

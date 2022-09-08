@@ -46,13 +46,14 @@ display: flex;
 justify-content: center;
 align-items: center;
 text-align: center;
+background: transparent;
 z-index: 6;
 `
 
 export const KiraVideo = styled.video`
 width: 275px;
 height: 475px;
-background: transparent;
+
 border-radius: 25%;
 z-index: 8;
 
