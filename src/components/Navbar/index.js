@@ -2,8 +2,8 @@
 import React, { useState, useEffect } from 'react';
 import { FaBars } from 'react-icons/fa';
 import Sidebar from '../Sidebar';
-import { Nav, NavbarContainer, CatIcon, MobileIcon, NavMenu, NavItem, NavLinks } from './NavbarElements';
-import { GiHollowCat} from 'react-icons/gi';
+import { Nav, NavbarContainer, MobileIcon, NavMenu, NavItem, NavLinks } from './NavbarElements';
+
 
 
 

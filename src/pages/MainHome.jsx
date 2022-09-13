@@ -45,19 +45,19 @@ const MainHome = () => {
         <GiHollowCat onClick={() => { scrollDownVideo() }} />
       </CatIcon>}
 
-      <section >
+      <section className='homeSections'>
         <HeroSection />
       </section>
-      <section >
+      <section className='homeSections'>
         <About />
       </section>
-      <section>
+      <section className='homeSections'>
         <Projects />
       </section>
-      <section>
+      <section className='homeSections'>
         <Skills />
       </section>
-      <section>
+      <section className='homeSections'>
         <div ref={videoSection}>
           {openKira && <Kira></Kira>}
         </div>

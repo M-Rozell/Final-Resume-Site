@@ -1,10 +1,9 @@
 
-import { AiOutlineCloseCircle } from 'react-icons/ai';
-import { useNavigate } from 'react-router-dom';
 import '../../css/BootstrapGhibli.css';
 import Navbar from "./Navbar";
 import React from "react";
-import { HashLink as Link } from "react-router-hash-link"
+import LinkComponent from './LinkComponent';
+
 
 
 const GhibliHome = () => {
@@ -15,7 +14,7 @@ const GhibliHome = () => {
             <div className="ghibliHomeBG">
 
                 <div className='ghibliCloseBtn'>
-                    <Link className="ghibliLink" to="/#Projects"><AiOutlineCloseCircle /></Link>
+                    <LinkComponent />
                 </div>
 
                 <Navbar />

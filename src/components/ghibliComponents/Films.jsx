@@ -1,17 +1,12 @@
 
-import { Link, useNavigate } from "react-router-dom";
-import { AiOutlineCloseCircle } from 'react-icons/ai';
+import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import '../../css/BootstrapGhibli.css';
 import Navbar from "./Navbar";
+import LinkComponent from "./LinkComponent";
 
 
 const Films = () => {
-
-    const navigate = useNavigate();
-    const navigateToProjects = () => {
-        navigate('/')
-    };
 
     const [films, setFilms] = useState([]);
 
@@ -27,7 +22,7 @@ const Films = () => {
             <div id="filmContainer">
 
                 <div className='ghibliCloseBtn '>
-                    <button onClick={navigateToProjects}><AiOutlineCloseCircle /></button>
+                    <LinkComponent />
                 </div>
 
                 <Navbar />

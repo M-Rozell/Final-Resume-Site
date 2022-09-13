@@ -4,8 +4,6 @@ import { motion } from "framer-motion";
 import { ObjectOneAnimation } from '../animationElements';
 import '../animation.css'
 
-const n = 1;
-
 
 const iconVariant = {
     animationStyle: {

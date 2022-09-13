@@ -1,16 +1,11 @@
 
-import { Link, useNavigate } from "react-router-dom";
-import { AiOutlineCloseCircle } from 'react-icons/ai';
+import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Navbar from "./Navbar";
+import LinkComponent from "./LinkComponent";
 
 
 const Vehicles = () => {
-
-    const navigate = useNavigate();
-    const navigateToProjects = () => {
-        navigate('/')
-    };
 
     const [vehicles, setVehicles] = useState([]);
 
@@ -26,7 +21,7 @@ const Vehicles = () => {
             <div id="vehicleContainer">
 
                 <div className='ghibliCloseBtn '>
-                    <button onClick={navigateToProjects}><AiOutlineCloseCircle /></button>
+                    <LinkComponent />
                 </div>
 
                 <Navbar />

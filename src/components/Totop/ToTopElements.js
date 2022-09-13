@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Keyframes } from "styled-components";
 
 export const ArrowUpContainer = styled.div`
   position: relative;
