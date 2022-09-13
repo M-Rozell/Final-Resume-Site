@@ -4,22 +4,18 @@ import { useNavigate } from 'react-router-dom';
 import '../../css/BootstrapGhibli.css';
 import Navbar from "./Navbar";
 import React from "react";
+import { HashLink as Link } from "react-router-hash-link"
 
 
 const GhibliHome = () => {
 
-    const navigate = useNavigate();
-    const navigateToProjects = () => {
-        navigate('/')
-        
-    };
 
     return (
         <div id="homeContainer">
             <div className="ghibliHomeBG">
 
                 <div className='ghibliCloseBtn'>
-                    <button onClick={navigateToProjects}><AiOutlineCloseCircle /></button>
+                    <Link className="ghibliLink" to="/#Projects"><AiOutlineCloseCircle /></Link>
                 </div>
 
                 <Navbar />
