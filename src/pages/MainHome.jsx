@@ -7,6 +7,7 @@ import Projects from './Projects';
 import Skills from './Skills';
 import { CatIcon } from '../components/Navbar/NavbarElements';
 import { GiHollowCat } from 'react-icons/gi';
+import "../css/MainHome.css"
 
 const MainHome = () => {
   const [cat, setCat] = useState(true)
@@ -36,23 +37,31 @@ const MainHome = () => {
   }, []);
 
 
-
-
   return (
-    <>
-      <MainNavbar CloseKiraVideo={setOpenKira}/>
+      <>
+      <MainNavbar CloseKiraVideo={setOpenKira} />
 
       {cat && <CatIcon onClick={() => { setOpenKira(true) }} >
         <GiHollowCat onClick={() => { scrollDownVideo() }} />
       </CatIcon>}
-
-      <HeroSection />
-      <About />
-      <Projects />
+      
+      <section className='homeHeroSection'>
+        <HeroSection />
+      </section>
+      <section className='homeAboutSection'>
+        <About />
+      </section>
+      <section>
+        <Projects />
+      </section>
+      <section>
       <Skills />
+      </section>
+      <section>
       <div ref={videoSection}>
         {openKira && <Kira></Kira>}
       </div>
+      </section>
     </>
   )
 }

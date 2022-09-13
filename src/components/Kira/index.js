@@ -1,6 +1,6 @@
 
 import React from 'react';
-import Video from '../../video/KiraTrim.mp4'
+import Video from '../../video/KiraTrim.mp4';
 import { VideoContainer, VideoWrapper, VideoAnimationWrapper, KiraFrame, VideoBg, KiraVideo } from './KiraElements';
 import Animation from '../StarAnimation';
 
