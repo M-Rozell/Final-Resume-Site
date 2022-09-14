@@ -21,7 +21,7 @@ const MainHome = () => {
         top: videoSection.current.offsetTop,
         behavior: 'smooth'
       })
-    }, 250)
+    }, 100)
   };
 
   const changeCat = () => {
@@ -59,7 +59,7 @@ const MainHome = () => {
       </section>
       <section className='homeSections'>
         <div ref={videoSection}>
-          {openKira && <Kira></Kira>}
+          {openKira && <Kira />}
         </div>
       </section>
     </>

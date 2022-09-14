@@ -7,7 +7,7 @@ height: 100vh;
 margin: 0;
 padding: 0;
 position: relative;
-background-color: black;
+background-color: rgb(0, 0, 0, 0.9);
 
 `
 export const VideoAnimationWrapper = styled.div`
@@ -33,7 +33,10 @@ export const KiraFrame = styled.div`
 position: absolute;
 width: 300px;
 height: 500px;
-background-color: red;
+background-color: #fa1402;
+box-shadow: #FF8300 0px 0px 0px 2px inset, rgb(0, 0, 0, 0.9) -5px 5px 0px -3px, #fcf003 -5px 5px, rgb(0, 0, 0, 0.9) -10px 10px 0px -3px, #88db02 -10px 10px, rgb(0, 0, 0, 0.9) -15px 15px 0px -3px, #741AAC -15px 15px, rgb(0, 0, 0, 0.9) -20px 20px 0px -3px, #0000FF -20px 20px;
+/* box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px; */
+/* border: 1px solid cornsilk; */
 z-index: 7;
 `
 
@@ -53,10 +56,9 @@ z-index: 6;
 export const KiraVideo = styled.video`
 width: 275px;
 height: 475px;
-
+border: 1px solid cornsilk;
 border-radius: 25%;
 z-index: 8;
-
 -o-object-fit: cover;
 object-fit: cover;
 background: #232a34;
