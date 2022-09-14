@@ -1,53 +1,7 @@
 
 import styled, { keyframes } from 'styled-components';
-import HeroImage from "../../images/HeroImageTrees.jpg"
+import HeroImage from "../../images/HeroImageTrees.jpg";
 
-
-export const HeroContainer = styled.div`
-    width: 100%;
-    height: 100vh;
-    background-image: url(${HeroImage}) ;
-  background-repeat: no-repeat;
-    background-position: center center fixed;
-    /* -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover; */
-    background-size: cover;
-    /* background-color: #417173; */
-    /* background-color: #d38db3; */
-    border-left: 2px solid cornsilk;
-    border-right: 2px solid cornsilk;
-    margin: 0;
-    padding: 0;
-`
-    
-export const HeroWrapper = styled.section`
-width: 100%;
-height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    /* display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    align-items: center; */
-    /* z-index: 5; */
-`
-export const TextWrapper = styled.div`
-margin: 0;
-padding: 0;
-/* box-shadow: rgba(0, 0, 0, 0.9) 0px 4px 12px; */
-`
-
-export const Top = styled.div`
-  text-align: center;
-`
-
-export const NameBox = styled.div`
-  /* margin-bottom: 20px; */
-  
-`
 const fadeIn = keyframes`
   0% {
     opacity: 0;
@@ -58,31 +12,41 @@ const fadeIn = keyframes`
   }
 `
 
+export const HeroContainer = styled.div`
+  width: 100%;
+  height: 100vh;
+    background-image: url(${HeroImage}) ;
+    background-repeat: no-repeat;
+    background-position: center center fixed;
+    background-size: cover;
+    border-left: 2px solid cornsilk;
+    border-right: 2px solid cornsilk;
+    margin: 0;
+    padding: 0;
+`
+
+export const TextWrapper = styled.section`
+  width: 100%;
+  height: 100vh;
+    position: relative;
+    top: 0;
+    left: 0;
+`
+
 export const NameP1 = styled.p`
-position: absolute;
-color: #F7EF8A;
-/* color: cornsilk; */
-font-family: 'IM Fell Great Primer SC', serif;
-font-size: 2rem;
+  position: absolute;
+  color: #F7EF8A;
+  font-family: 'IM Fell Great Primer SC', serif;
+  font-size: 2rem;
   bottom: 20px;
   left: 20px;
+  animation-name: ${fadeIn};
+  animation-duration: 5s;
 
 @media screen and (min-width: 768px) {
   font-size: 3rem;
 }
-
 `
-// export const NameP1 = styled.p`
-//   margin: auto;
-//   background: -webkit-linear-gradient(#AE8625, #F7EF8A, #D2AC47);
-//   -webkit-background-clip: text;
-//   -webkit-text-fill-color: transparent;
-//   font-family: 'Rampart One', cursive;
-//   /* font-size: 5.5rem; */
-  
-//   position: relative;
-//   animation-name: ${fadeIn};
-//   animation-duration: 5s;
 
 //   @media screen and (max-width: 1920px) {
 //     font-size: 8rem;
@@ -101,78 +65,52 @@ font-size: 2rem;
 //     }
 // `
 
-export const Bottom = styled.div`
-position: relative;
-display: flex;
-flex-direction: column;
-text-align: center;
-`
-
-export const DetailsP = styled.p`
-color: #F7EF8A;
-/* background-color: rgb(40, 40, 40, 0.6); */
-font-family: 'Mingzat', sans-serif;
-font-size: 1.5rem;
-animation-name: ${fadeIn};
-animation-duration: 10s;
-`
-
-export const DetailsP2 = styled.p`
-color: #F7EF8A;
-/* background-color: rgb(40, 40, 40, 0.6); */
-font-family: 'Mingzat', sans-serif;
-font-size: 1.5rem;
-margin-top: -10px;
-animation-name: ${fadeIn};
-animation-duration: 10s;
-`
-
+//React Icons for About Page//
 export const LinkBtns = styled.div`
-position: relative;
-display: flex;
+  position: relative;
+  display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   font-size: 1.25rem;
-  /* z-index: 6; */
 `
 export const GitHub = styled.a`
-color: #9eaf92;
+  color: #F7EF8A;
   text-decoration: none;
 
-  &:visited {
-    color: #9eaf92;
+&:visited {
+    color: #AE8625;
   }
 
-  &:hover {
+&:hover {
     color: cornsilk;
   }
 `
 
 export const Email = styled.a`
-margin-left: 10px;
+  margin-left: 10px;
   margin-right: 10px;
-  color: #9eaf92;
+  color: #F7EF8A;
   text-decoration: none;
 
-  &:visited {
-    color: #9eaf92;
+&:visited {
+    color: #AE8625;
   }
 
-  &:hover {
+&:hover {
     color: cornsilk;
   }
 `
 
 export const LinkedIn = styled.a`
-color: #9eaf92;
+  color: #F7EF8A;
   text-decoration: none;
 
-  &:visited {
-    color: #9eaf92;
+&:visited {
+    color: #AE8625;
   }
 
-  &:hover {
+&:hover {
     color: cornsilk;
   }
 `
