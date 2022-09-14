@@ -11,7 +11,7 @@ export const ScrollingSkillsContainer = styled.div`
 `
 export const ScrollBox = styled.div`
 width: 100%;
-  background: linear-gradient(#f56036 1px, #ddad0b 1px);
+  background: linear-gradient(#f56036 0.75px, #ddad0b 1px);
   background-size: 100% 10px;
   box-sizing: border-box;
   padding: 0;
@@ -27,11 +27,11 @@ export const ScrollSkills = styled.div`
 
   display: flex;
   justify-content: center;
-  font-size: 2.5rem;
+  font-size: 2.25rem;
   text-transform: uppercase;
-  background-image: linear-gradient(#f56036 1px, transparent 1px);
+  background-image: linear-gradient(#f56036 0.75px, transparent 1px);
   background-size: 100% 10px;
-  font-family: Arial;
+  font-family: 'Bungee Shade', cursive;
   /* -webkit-background-clip: text;
   text-fill-color: transparent; */
   background-clip: text;
@@ -40,7 +40,7 @@ export const ScrollSkills = styled.div`
   text-align: center;
   transition: .1s;
   transition: margin 1s;
-  color: #f56036;
+  color: #bb2e12;
 
   &:hover {
     margin-top: -3500px;
