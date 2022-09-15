@@ -7,13 +7,13 @@ import Projects from './Projects';
 import Skills from './Skills';
 import { CatIcon } from '../components/Navbar/NavbarElements';
 import { GiHollowCat } from 'react-icons/gi';
-import "../css/MainHome.css"
+import "../css/MainHome.css";
 
 const MainHome = () => {
+
   const [cat, setCat] = useState(true)
   const [openKira, setOpenKira] = useState(false);
   const videoSection = useRef(null);
-
 
   const scrollDownVideo = () => {
     setTimeout(() => {
@@ -64,6 +64,6 @@ const MainHome = () => {
       </section>
     </>
   )
-}
+};
 
 export default MainHome;

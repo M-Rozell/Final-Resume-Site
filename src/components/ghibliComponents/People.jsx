@@ -22,7 +22,7 @@ const People = () => {
             <div id="peopleContainer">
 
                 <div className='ghibliCloseBtn'>
-                   <LinkComponent />
+                    <LinkComponent />
                 </div>
 
                 <Navbar />
@@ -48,7 +48,7 @@ const People = () => {
             </div>
         </div>
     )
-}
+};
 
 export default People;
 

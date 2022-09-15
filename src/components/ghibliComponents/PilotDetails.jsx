@@ -47,6 +47,6 @@ const PilotDetails = () => {
             </div>
         </div>
     )
-}
+};
 
 export default PilotDetails;

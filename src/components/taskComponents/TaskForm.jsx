@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect, useRef } from 'react'; //rfce shortcut
+import React, { useState, useEffect, useRef } from 'react'; 
 
 function TaskForm(props) {
 
@@ -25,6 +25,7 @@ function TaskForm(props) {
     };
 
     return (
+        
         <form className='taskForm' onSubmit={handleSubmit}>
             {props.edit ? (<>
                 <input

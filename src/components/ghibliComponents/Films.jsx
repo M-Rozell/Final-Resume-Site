@@ -46,7 +46,7 @@ const Films = () => {
             </div>
         </div>
     )
-}
+};
 
 export default Films;
 

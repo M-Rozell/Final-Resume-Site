@@ -1,5 +1,6 @@
-import React from 'react'
-import { SidebarContainer, SidebarIcon, SidebarCloseIcon, SidebarWrapper, SidebarMenu, SidebarLink } from './SidebarElements'
+
+import React from 'react';
+import { SidebarContainer, SidebarIcon, SidebarCloseIcon, SidebarWrapper, SidebarMenu, SidebarLink } from './SidebarElements';
 
 const Sidebar = ({ CloseSidebar, OpenNavIcon }) => {
 

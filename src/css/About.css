@@ -4,8 +4,8 @@
 }
 
 .aboutContainer {
-width: 100%;
-height: 100vh;
+  width: 100%;
+  height: 100vh;
   position: relative;
   background-image: url("../images/Dark.jpg");
   background-position: center;
@@ -14,8 +14,8 @@ height: 100vh;
 }
 
 .aboutWrapper {
-width: 100%;
-height: 100vh;
+  width: 100%;
+  height: 100vh;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -34,6 +34,12 @@ height: 100vh;
   font-size: clamp(4rem, 10vw, 8rem);
   z-index: 3;
 }
+@media screen and (min-width: 1440px) {
+  .aboutTitle {
+    margin-left: 125px;
+    margin-right: 125px;
+  }
+}
 
 
 .resume {
@@ -47,6 +53,13 @@ height: 100vh;
   justify-content: center;
   border: .25px solid cornsilk;
 }
+@media screen and (min-width: 1440px) {
+  .resume{
+    margin-left: 150px;
+    margin-right: 150px;
+  }
+}
+
 
 .objective {
   margin: 0;

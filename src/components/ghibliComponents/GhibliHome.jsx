@@ -5,9 +5,7 @@ import React from "react";
 import LinkComponent from './LinkComponent';
 
 
-
 const GhibliHome = () => {
-
 
     return (
         <div id="homeContainer">
@@ -39,12 +37,12 @@ const GhibliHome = () => {
             </div>
         </div>
     )
-}
+};
 
 export default GhibliHome;
 
 
-    ;
+
 
 
 

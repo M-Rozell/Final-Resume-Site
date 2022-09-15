@@ -9,14 +9,7 @@ function TaskList() {
   const [tasks, setTasks] = useState(
     JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY)) || []);
 
-  //load tasks, only want to call this once. when the page loads and DOES NOT WORK!!!
-  //INSTEAD DO ABOVE WITH USESTATE B/C (When you reload the app/component both effects will run, and React state updates are processed asynchronously, so it's picking up the empty array state persisted to localStorage before the state update is processed. Just read from localStorage directly when setting the initial todoList state value.)
-  // useEffect(()=> {
-  //   const storedTasks = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY))//json.parse converts it to an array so map function in tasks.jsx works
-  //   if (storedTasks) {
-  //     setTasks(storedTasks)
-  //   }
-  // }, [])
+
 
   //store Tasks
   useEffect(() => {
@@ -24,10 +17,10 @@ function TaskList() {
   }, [tasks]);
 
   const addTask = task => {
-    if (!task.text || /^\s*$/.test(task.text)) { //pulled from stackOverflow...uses RegExp test method to test whether a string val is empty or only contains spaces. The test() method executes a search for a match between a regular expression and a specified string. Returns true or false.
+    if (!task.text || /^\s*$/.test(task.text)) {
       return
     }
-    const newTasks = [task, ...tasks] //...tasks utilizes the spread operator. takes in an iterable(array) and expands it into individual elements.
+    const newTasks = [task, ...tasks]
     setTasks(newTasks);
     console.log(newTasks);
   };
@@ -47,7 +40,7 @@ function TaskList() {
   const completeTask = id => {
     let updatedTasks = tasks.map(task => {
       if (task.id === id) {
-        task.isComplete = !task.isComplete //toggling b/w true and false
+        task.isComplete = !task.isComplete
       }
       return task
     })
@@ -55,10 +48,13 @@ function TaskList() {
   };
 
   return (
+
     <div>
       <h1 className='taskCompiler'>Task Compiler</h1>
       <hr className='horizontalLine' />
+
       <TaskForm onSubmit={addTask} />
+
       <Tasks
         tasks={tasks}
         completeTask={completeTask}
@@ -66,7 +62,7 @@ function TaskList() {
         updateTask={updateTask} />
 
     </div>
-  );
+  )
 };
 
 export default TaskList;

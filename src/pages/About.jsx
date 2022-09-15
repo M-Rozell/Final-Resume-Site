@@ -10,12 +10,11 @@ import { motion } from "framer-motion";
 
 const textAnimate = {
     offscreen: { y: 100, opacity: 0 },
-    onscreen: { y: 0, opacity: 1, transition: { duration: 1, type: "spring", bounce:0.5 } }
-}
+    onscreen: { y: 0, opacity: 1, transition: { duration: 1, type: "spring", bounce: 0.5 } }
+};
 
 
 const About = () => {
-
 
     return (
 
@@ -23,7 +22,7 @@ const About = () => {
             <motion.div className="aboutWrapper"
                 initial={"offscreen"}
                 whileInView={"onscreen"}
-                viewport={{once:false, amount:1}}
+                viewport={{ once: false, amount: 1 }}
                 transition={{ staggerChildren: 0.5 }}>
 
                 <div className="aboutTitleContainer">

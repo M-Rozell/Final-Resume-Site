@@ -6,7 +6,6 @@ import Navbar from "./Navbar";
 import LinkComponent from "./LinkComponent";
 
 
-
 const FilmDetails = () => {
 
     const { filmid } = useParams();
@@ -49,8 +48,8 @@ const FilmDetails = () => {
                 </div>
             </div>
         </div>
-
     )
-}
+};
 
 export default FilmDetails;
+

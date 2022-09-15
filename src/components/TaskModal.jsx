@@ -9,15 +9,18 @@ function TaskModal({ closeModal, openBtn }) {
     const handleCloseTaskModal = () => {
         closeModal(false)
         openBtn(true)
-    }
+    };
 
     return (
         <div className='taskContainer'>
             <div className='taskApp'>
+
                 <div className='taskCloseBtn '>
                     <button onClick={() => handleCloseTaskModal()}><AiFillCloseCircle /></button>
                 </div>
+
                 <TaskList />
+
             </div>
         </div>
     )

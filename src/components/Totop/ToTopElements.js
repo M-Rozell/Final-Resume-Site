@@ -1,3 +1,4 @@
+
 import styled from "styled-components";
 
 export const ArrowUpContainer = styled.div`
@@ -14,7 +15,7 @@ export const ArrowIcon = styled.div`
     animation: movebtn 3s linear infinite;
     transition: all .5s ease-in-out;
 
-  &:hover {
+&:hover {
   animation: none;
   color: #F7EF8A;
   }
@@ -40,5 +41,4 @@ export const ArrowIcon = styled.div`
         transform: translateY(0px);
     }
 }
-
 `

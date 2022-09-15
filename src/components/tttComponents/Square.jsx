@@ -1,12 +1,14 @@
 
-import '../../css/TTTModal.css'
-import React from 'react'
+import '../../css/TTTModal.css';
+import React from 'react';
 
-function Square({value, clickSquare}) {
+function Square({ value, clickSquare }) {
+
     return (
-        <div 
-        className='square'
-        onClick={clickSquare}>
+
+        <div
+            className='square'
+            onClick={clickSquare}>
             {value}
         </div>
     )

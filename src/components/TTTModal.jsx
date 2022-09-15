@@ -75,7 +75,7 @@ function TTTModal({ closeModal, openBtn }) {
     const handleCloseTTTModal = () => {
         closeModal(false)
         openBtn(true)
-    }
+    };
 
     return (
 
@@ -115,6 +115,6 @@ function TTTModal({ closeModal, openBtn }) {
             </div>
         </div>
     )
-}
+};
 
 export default TTTModal;

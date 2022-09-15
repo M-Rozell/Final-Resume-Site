@@ -22,8 +22,6 @@
     color: cornsilk;
     margin-bottom: 20px;
     border-radius: 8px;
-    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
-    /* box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
@@ -45,41 +43,6 @@
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
 }
-
-
-/* .weatherAppContainer:before {
-    content: '';
-    background: url('../assets/bellingrath-gardens-alabama-landscapeTwo.jpg') no-repeat center center/cover;
-    top: 0;
-    left: 0;
-    z-index: -1; */
-
-    /* Set rules to fill background */
-    /* min-height: 100%;
-    min-width: 1024px; */
-
-    /* Set up proportionate scaling */
-    /* width: 100%;
-    height: auto; */
-
-    /* Set up positioning */
-    /* position: fixed;
-    top: 0;
-    left: 0;
-} */
-
-
-/* using a media query to check if the browser window is smaller than the image, and using a combo percentage-left and negative left margin to keep it centered regardless. */
-/* @media screen and (max-width: 1024px) { */
-
-    /* Specific to this particular image */
-    /* img.bg {
-        left: 50%;
-        margin-left: -512px;
-    }
-} */
-
-
 
 .weatherAppContainer .search {
     text-align: center;
@@ -160,5 +123,4 @@
     font-size: 1rem;
     cursor: pointer;
     color: cornsilk;
-    
 }

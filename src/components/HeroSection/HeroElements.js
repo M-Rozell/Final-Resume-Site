@@ -15,22 +15,22 @@ const fadeIn = keyframes`
 export const HeroContainer = styled.div`
   width: 100%;
   height: 100vh;
-    background-image: url(${HeroImage}) ;
-    background-repeat: no-repeat;
-    background-position: center center fixed;
-    background-size: cover;
-    border-left: 2px solid cornsilk;
-    border-right: 2px solid cornsilk;
-    margin: 0;
-    padding: 0;
+  background-image: url(${HeroImage}) ;
+  background-repeat: no-repeat;
+  background-position: center center fixed;
+  background-size: cover;
+  border-left: 2px solid cornsilk;
+  border-right: 2px solid cornsilk;
+  margin: 0;
+  padding: 0;
 `
 
 export const TextWrapper = styled.section`
   width: 100%;
   height: 100vh;
-    position: relative;
-    top: 0;
-    left: 0;
+  position: relative;
+  top: 0;
+  left: 0;
 `
 
 export const NameP1 = styled.p`
@@ -44,26 +44,20 @@ export const NameP1 = styled.p`
   animation-duration: 5s;
 
 @media screen and (min-width: 768px) {
-  font-size: 3rem;
+  font-size: 4rem;
 }
+
+@media screen and (min-width: 1440px) {
+  font-size: 5rem;
+}
+
+@media screen and (min-width: 2500px) {
+  font-size: 7rem;
+}
+
 `
 
-//   @media screen and (max-width: 1920px) {
-//     font-size: 8rem;
-// }
 
-// @media screen and (max-width: 1000px) {
-//     font-size: 7rem;
-// }
-
-//   @media screen and (max-width: 768px) {
-//     font-size: 5.5rem;
-// }
-
-// @media screen and (max-width: 280px) {
-//         font-size: 4rem;
-//     }
-// `
 
 //React Icons for About Page//
 export const LinkBtns = styled.div`
