@@ -10,6 +10,7 @@ const MainNavbar = ({ CloseKiraVideo }) => {
   const [scrollNav, setScrollNav] = useState(false);
   const [sidebar, setSidebar] = useState(false);
   const [navIcon, setNavIcon] = useState(true);
+  
 
   const changeNav = () => {
     if (window.scrollY >= 80) {
@@ -39,7 +40,7 @@ const MainNavbar = ({ CloseKiraVideo }) => {
             <FaBars />
           </MobileIcon>}
 
-          {sidebar && <Sidebar CloseSidebar={setSidebar} OpenNavIcon={setNavIcon} />}
+          {sidebar && <Sidebar CloseSidebar={setSidebar} OpenNavIcon={setNavIcon} CloseKiraVideo={CloseKiraVideo}/>}
 
           <NavMenu>
 

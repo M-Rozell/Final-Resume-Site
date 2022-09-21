@@ -2,11 +2,12 @@
 import React from 'react';
 import { SidebarContainer, SidebarIcon, SidebarCloseIcon, SidebarWrapper, SidebarMenu, SidebarLink } from './SidebarElements';
 
-const Sidebar = ({ CloseSidebar, OpenNavIcon }) => {
+const Sidebar = ({ CloseSidebar, OpenNavIcon, CloseKiraVideo }) => {
 
     const handleSidebarMenu = () => {
         CloseSidebar(false)
         OpenNavIcon(true)
+        CloseKiraVideo()
     };
 
     return (
