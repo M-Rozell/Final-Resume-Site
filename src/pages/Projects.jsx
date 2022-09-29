@@ -7,12 +7,16 @@ import React, { useState } from 'react';
 import '../css/BootstrapGhibli.css';
 import '../css/Projects.css';
 
+import Dicey from '../components/DiceyBusiness';
+
 const Projects = () => {
 
   const navigate = useNavigate();
   const [tttmodal, setTTTModal] = useState(false);
   const [task, setTask] = useState(false);
   const [weatherBtn, setWeatherBtn] = useState(false);
+  const [diceyBtn, setDiceyBtn] = useState(false)
+
   const [btn, setBtn] = useState(true);
 
   const navigateToGhibliHome = () => {
@@ -34,6 +38,12 @@ const Projects = () => {
     setBtn(false)
   };
 
+  const handleDicyBtn = () => {
+    setDiceyBtn(true)
+    setBtn(false)
+    
+  }
+
 
   return (
 
@@ -47,12 +57,18 @@ const Projects = () => {
           {btn && <button className='taskBtn' onClick={() => { handleTaskBtn() }}>Task Compiler</button>}
           {btn && <button className='weatherBtn' onClick={() => { handleWeatherBtn() }}>Weather App</button>}
           {btn && <button className='bootstrapBtn' onClick={navigateToGhibliHome}>Bootstrap Ghibli</button>}
+          
+          {btn && <button className='dicy' onClick={handleDicyBtn}>Dicey</button>}
+        
         </div>
 
         <div className='projectModals'>
           {tttmodal && <TTTModal closeModal={setTTTModal} openBtn={setBtn} />}
           {task && <TaskModal closeModal={setTask} openBtn={setBtn} />}
           {weatherBtn && <WeatherModal closeModal={setWeatherBtn} openBtn={setBtn} />}
+
+        {diceyBtn && <Dicey closeModal={setDiceyBtn} openBtn={setBtn}/>}
+
         </div>
       </div>
     </div>
