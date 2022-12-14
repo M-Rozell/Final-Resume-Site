@@ -80,7 +80,11 @@
 }
 
 .logo {
-    width: 50%;
+    width: 100%;
+}
+
+input::placeholder {
+    color: black;
 }
 
 

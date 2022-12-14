@@ -20,12 +20,12 @@ const RandMHome = () => {
                     <main className="container-md ">
                         <div className="card col md-6 bg-transparent border-0">
                             <div className="card-body ">
-                                <div className='rAndMLogos d-flex flex-row justify-content-between'>
+                                <div className='rAndMLogos d-flex flex-column align-items-center'>
                                     <img src={Logo} className="logo"></img>
-                                    <div>
-                                        
-                                    <input className='form-field mt-5' type='search' placeholder="Search for a character" name='characterName' />
-                                </div>
+                                    <form>
+                                       {/* <label className='form-label text-light m-2'>Name</label>  */}
+                                    <input className='mt-5 text-dark' type="search" name="characterName" id="" placeholder='Search for a character'/>
+                                </form>
                                 </div>
                             </div>
 
