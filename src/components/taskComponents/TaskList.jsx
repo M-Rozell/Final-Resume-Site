@@ -6,6 +6,7 @@ import Tasks from './Tasks';
 const LOCAL_STORAGE_KEY = 'taskApp.tasks';
 
 function TaskList() {
+  
   const [tasks, setTasks] = useState(
     JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY)) || []);
 

@@ -4,7 +4,7 @@ import TaskModal from '../components/TaskModal';
 import { useNavigate } from 'react-router-dom';
 import TTTModal from '../components/TTTModal';
 import React, { useState } from 'react';
-import '../css/BootstrapGhibli.css';
+import '../css/rAndMBootstrap.css';
 import '../css/Projects.css';
 
 import Dicey from '../components/DiceyBusiness';
@@ -20,7 +20,7 @@ const Projects = () => {
   const [btn, setBtn] = useState(true);
 
   const navigateToGhibliHome = () => {
-    navigate('/GhibliHome');
+    navigate('/RandMHome');
   };
 
   const handleTTTBtn = () => {

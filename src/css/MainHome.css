@@ -1,8 +1,35 @@
 
 
 
-html {scroll-snap-type: y mandatory}
+/* html {
+    scroll-snap-type: y mandatory;
+}
 
-.homeSections {scroll-snap-align: start}
+.homeSections {scroll-snap-align: center} */
+
+html {
+   box-sizing: border-box;
+   font-size: 100%;
+}
+
+*,
+ *::before,
+  *::after{
+    box-sizing: inherit; 
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
     
+/* h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding: 0;
+    margin: 0;
+} */
 

@@ -1,10 +1,10 @@
 
 import React, { useState, useEffect } from 'react'
 import "../../css/Dicey.css"
-import { Dice } from './dice'
+import Roll from './Roll'
 
 
-export const Dicey = ({ closeModal, openBtn, number, resetNumber }) => {
+export const Dicey = ({ closeModal, openBtn }) => {
 
     const handleDiceyClose = () => {
         closeModal(false)
@@ -13,14 +13,22 @@ export const Dicey = ({ closeModal, openBtn, number, resetNumber }) => {
 
     const [newDie, setNewDie] = useState([])
 
+
     const handleNewDie = () => {
-        setNewDie(arr => [...arr, `${arr.length}`])
-        console.log(newDie)
+        setNewDie(newArr => [...newArr, newArr.length])
     }
+
+    useEffect(() => {
+        console.log(newDie)
+    }, [newDie])
+
 
     const handleReroll = () => {
+        
+        setNewDie(newDie.forEach(element => {
+            
+        }))
     }
-
 
 
 
@@ -39,20 +47,25 @@ export const Dicey = ({ closeModal, openBtn, number, resetNumber }) => {
 
             </div>
 
-            <div className='diceContainer'>
+            <ul className='diceContainer'>
 
+                {newDie.map((id) =>
+                    <li
+                    key={id}
+                    >
+                        <Roll
+                            
+                        /></li>
+                )}
 
-
-                {newDie.map(() =>
-                    <div> <Dice /> </div>)}
-
-
-
-            </div>
-
-
+            </ul>
         </div>
     )
 }
 
 export default Dicey;
+
+
+
+
+

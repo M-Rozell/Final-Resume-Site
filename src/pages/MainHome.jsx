@@ -8,8 +8,28 @@ import Skills from './Skills';
 import { CatIcon } from '../components/Navbar/NavbarElements';
 import { GiHollowCat } from 'react-icons/gi';
 import "../css/MainHome.css";
+import useScrollSnap from 'react-use-scroll-snap';
+
+
 
 const MainHome = () => {
+
+  // const mainHomeContainer = useRef(null)
+  
+  // const scrollSnap = () => {
+  //   const element = mainHomeContainer.current
+  //   createScrollSnap(element, {
+  //     snapDestinationX: '0%',
+  //     snapDestinationY: '50%',
+  //     timeout: 100,
+  //     duration: 300,
+  //     threshold: 0.2,
+  //   }, console.log('snapped'))
+    
+  // }
+  // useEffect(() => {
+  //   scrollSnap()
+  // },[mainHomeContainer])
 
   const [cat, setCat] = useState(true)
   const [openKira, setOpenKira] = useState(false);
@@ -36,33 +56,43 @@ const MainHome = () => {
     window.addEventListener('scroll', changeCat)
   }, []);
 
+  const scrollRef = useRef(null);
+  useScrollSnap({ref: scrollRef, duration: 25, delay: 5});
+
 
   return (
-    <>
+    
+<div className='sectionContainer' id='mainHomeContainer' >
       <MainNavbar CloseKiraVideo={setOpenKira} />
 
       {cat && <CatIcon onClick={() => { setOpenKira(true) }} >
         <GiHollowCat onClick={() => { scrollDownVideo() }} />
       </CatIcon>}
 
-      <section className='homeSections'>
-        <HeroSection />
-      </section>
-      <section className='homeSections'>
-        <About />
-      </section>
-      <section className='homeSections'>
-        <Projects />
-      </section>
-      <section className='homeSections'>
-        <Skills />
-      </section>
-      <section className='homeSections'>
+      <div className='snapScrollContainer' ref={scrollRef}>
+
+        <section className='homeSections' >
+          <HeroSection />
+        </section>
+        <section className='homeSections'>
+          <About />
+        </section>
+        <section className='homeSections'>
+          <Projects />
+        </section>
+        <section className='homeSections'>
+          <Skills />
+        </section>
+
+      </div>
+
+      <section className='homeSections' >
         <div ref={videoSection}>
           {openKira && <Kira />}
         </div>
       </section>
-    </>
+</div>
+    
   )
 };
 

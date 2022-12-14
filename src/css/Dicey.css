@@ -15,6 +15,7 @@
     justify-content: space-around;
     float: left;
     flex-wrap: wrap;
+    list-style-type: none;
 }
 
 .dice {
@@ -23,4 +24,5 @@
     margin-right: 5px;
     cursor: pointer;
     font-size: 3rem;
+    
 }

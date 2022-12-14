@@ -22,7 +22,7 @@ const About = () => {
             <motion.div className="aboutWrapper"
                 initial={"offscreen"}
                 whileInView={"onscreen"}
-                viewport={{ once: false, amount: 1 }}
+                viewport={{ once: true, amount: 0 }}
                 transition={{ staggerChildren: 0.5 }}>
 
                 <div className="aboutTitleContainer">
