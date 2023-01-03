@@ -1,4 +1,4 @@
-import { min } from "moment/moment";
+
 import React, { useState } from "react";
 
 const Pagination = ({
@@ -8,6 +8,8 @@ const Pagination = ({
   paginate,
   currentPage,
   setCurrentPage,
+  
+
 }) => {
   const [pageNumberLimit, setPageNumberLimit] = useState(5);
   const [maxPageNumberLimit, setMaxPageNumberLimit] = useState(5);
@@ -60,12 +62,13 @@ const Pagination = ({
   let pageIncrementBtn = null;
   if (pageNumbers.length > maxPageNumberLimit) {
     pageIncrementBtn = (
-      <a href="#" 
-      onClick={handleNextBtn} 
-      className="page-link dots"
-      disabled={
-        currentPage === pageNumbers[pageNumbers.length] ? true : false
-      }
+      <a
+        href="#"
+        onClick={handleNextBtn}
+        className="page-link dots"
+        disabled={
+          currentPage === pageNumbers[pageNumbers.length] ? true : false
+        }
       >
         &hellip;
       </a>
@@ -75,30 +78,15 @@ const Pagination = ({
   let pageDecrementBtn = null;
   if (minPageNumberLimit >= 1) {
     pageDecrementBtn = (
-      <button href="#" 
-      onClick={handlePrevBtn} 
-      className="page-link dots"
-      >
+      <button href="#" onClick={handlePrevBtn} className="page-link dots">
         &hellip;
       </button>
     );
   }
 
   const handleLoadMore = () => {
-    setCharactersPerPage(charactersPerPage + 5)
-  }
-
-
-  const handleStartBtn = () => {
-
-  if(currentPage > pageNumbers[0]){
-setCurrentPage(pageNumbers[0])
-  }
-  }
-
-  const handleEndBtn = () => {
-    setCurrentPage(pageNumbers.length)
-  }
+    setCharactersPerPage(charactersPerPage + 5);
+  };
 
 
 
@@ -131,14 +119,12 @@ setCurrentPage(pageNumbers[0])
             Next
           </button>
         </li>
-      
-      
       </ul>
-<div className="d-flex justify-content-space-between"></div>
+      <div className="d-flex justify-content-space-between"></div>
 
-<button onClick={handleLoadMore} className="loadMoreBtn m-1">Load More</button>
-
-
+      <button onClick={handleLoadMore} className="loadMoreBtn mt-1 mb-3">
+        Load More
+      </button>
     </nav>
   );
 };

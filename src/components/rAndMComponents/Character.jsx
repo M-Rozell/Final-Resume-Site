@@ -1,11 +1,9 @@
 
-// import { Link, useParams } from "react-router-dom";
+
 import { useState, useEffect } from "react";
 import '../../css/rAndMBootstrap.css';
-import Navbar from "./Navbar";
-import LinkComponent from "./LinkComponent";
 // import axios from "axios";
-import CharacterFetch from "./CharacterFetch";
+import CharacterCard from "./CharacterCard";
 import Pagination from "./Pagination";
 
 
@@ -17,25 +15,8 @@ const Character = () => {
     const [charactersPerPage, setCharactersPerPage] = useState(5);
 
     const [loading, setLoading] = useState(false)
-    // useEffect(() => {
-    //     const fetchCharacters = async () => {
-    //         setLoading(true);
-    //         const res = await axios.get("https://rickandmortyapi.com/api/character");
-    //         setCharacters(res.data);
-    //         setLoading(false);
-    //     }
-    //     fetchCharacters();
-    // },[])
+   
 
-    // useEffect(() => {
-    //     fetch(`https://rickandmortyapi.com/api/character/`)
-    //         .then(res => res.json())
-    //         .then(data => {setCharacter(data.results)
-    //         console.log(data.results)
-    //         })
-
-    //         .catch(e => alert(e.message))
-    // }, []); 
     useEffect(() => {
         fetchData("https://rickandmortyapi.com/api/character");
     }, []);
@@ -68,16 +49,11 @@ const Character = () => {
 
         <div id="characterContainer">
 
-            {/* <div className='rAndMCloseBtn'>
-                <LinkComponent />
-            </div>
-
-            <Navbar /> */}
 
 
-            <div className=" mt-5 mb-5 card d-flex justify-content-center cardTable">
+            <div className="d-flex justify-content-center cardTable">
                 <div className="col-sm-6">
-                    <CharacterFetch 
+                    <CharacterCard 
                     character={currentCharacter} 
                     loading={loading} />
                     
@@ -95,19 +71,7 @@ const Character = () => {
 
     )
 };
-{/* <ul className="list-group ">
-                        {character.map(character => (
-                            <li
-                                key={`character=${character.id}`}
-                                className="list-group-item align-items-center shadow rounded text-center">
-                                <h3>{character.name}</h3>
-                                <div>{character.status}</div>
-                                <Link to={`/character/${character.id}`} className="btn btn-outline-success m-2">
-                                    Full Details
-                                </Link>
-                            </li>
-                        ))}
-                    </ul> */}
+
 export default Character;
 
 

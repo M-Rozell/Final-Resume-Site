@@ -1,15 +1,19 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, lazy, Suspense } from 'react';
 import HeroSection from '../components/HeroSection';
 import Kira from '../components/Kira';
 import MainNavbar from '../components/Navbar';
-import About from './About';
-import Projects from './Projects';
-import Skills from './Skills';
+// import About from './About';
+// import Projects from './Projects';
+// import Skills from './Skills';
 import { CatIcon } from '../components/Navbar/NavbarElements';
 import { GiHollowCat } from 'react-icons/gi';
 import "../css/MainHome.css";
 import useScrollSnap from 'react-use-scroll-snap';
 
+
+const About = lazy(() => import('./About'));
+const Projects = lazy(() => import('./Projects'));
+const Skills = lazy(() => import('./Skills'));
 
 
 const MainHome = () => {
@@ -75,13 +79,19 @@ const MainHome = () => {
           <HeroSection />
         </section>
         <section className='homeSections'>
-          <About />
-        </section>
+          <Suspense fallback={<div>Loading...</div>}>
+            <About />
+          </Suspense>
+                  </section>
         <section className='homeSections'>
+        <Suspense fallback={<div>Loading...</div>}>
           <Projects />
+          </Suspense>
         </section>
         <section className='homeSections'>
+        <Suspense fallback={<div>Loading...</div>}>
           <Skills />
+          </Suspense>
         </section>
 
       </div>

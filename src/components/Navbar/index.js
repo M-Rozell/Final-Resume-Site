@@ -29,6 +29,30 @@ const MainNavbar = ({ CloseKiraVideo }) => {
     setNavIcon(false)
   };
 
+  // const [sidebar, setSidebar] = useState(false);
+  // const [navIcon, setNavIcon] = useState(true);
+
+  
+  // const handleMobileIcon = () => {
+  //   setSidebar(true)
+  //   setNavIcon(false)
+  // };
+
+
+  // useEffect(() => {
+  //   const checkOutsideClick = e => {
+  //       if(sidebar && ref.current && !ref.current.contains(e.target)){
+  //         setSidebar(false)
+  //       }
+  //   }
+  // document.addEventListener("mousedown", checkOutsideClick)
+  
+  // return () => {
+  //   //cleanup the event listner
+  //   document.removeEventListener("mousedown", checkOutsideClick)
+  // }
+  // },[sidebar])
+
 
   return (
     <>

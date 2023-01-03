@@ -1,57 +1,115 @@
 
 import '../../css/rAndMBootstrap.css';
-import Navbar from "./Navbar";
-import React from "react";
+import axios from 'axios';
+import React, { useState, useEffect } from "react";
 import LinkComponent from './LinkComponent';
 import Logo from '../../images/rick.png'
 import Character from './Character';
+import '../../css/rAndMBootstrap.css';
+
 
 
 const RandMHome = () => {
 
+
+
+
+    const [data, setData] = useState({ results: [] }); //hooks depend on the order they are defined.
+    const [query, setQuery] = useState("");
+    const [search, setSearch] = useState("");
+    const [allCharacters, setAllCharacters] = useState(true);
+    const [searchCharacters, setSearchCharacters] = useState(false)
+
+    const handleSubmit = e => {
+        e.preventDefault();
+        setSearch(query)
+    }
+
+
+    const searchCharacter = async () => {
+        const result = await axios(`https://rickandmortyapi.com/api/character/?name=${query}`);
+        setData(result.data);
+    }
+
+    useEffect(() => {
+        searchCharacter();
+    }, [search])
+
+    const handleChange = (e) => {
+        setQuery(e.target.value)
+        setAllCharacters(false)
+        setSearchCharacters(true)
+    }
+
+    const reload = () => {
+        setAllCharacters(true)
+        setSearchCharacters(false)
+        setQuery("")
+    }
+
+    
+
     return (
+
         <div id="homeContainer">
             <div className="rAndMHomeBG">
 
                 <div className='rAndMCloseBtn'>
                     <LinkComponent />
                 </div>
-                <header>
-                    <main className="container-md ">
-                        <div className="card col md-6 bg-transparent border-0">
-                            <div className="card-body ">
-                                <div className='rAndMLogos d-flex flex-column align-items-center'>
-                                    <img src={Logo} className="logo"></img>
-                                    <form>
-                                       {/* <label className='form-label text-light m-2'>Name</label>  */}
-                                    <input className='mt-5 text-dark' type="search" name="characterName" id="" placeholder='Search for a character'/>
-                                </form>
+                <div className='rAndMLogos d-flex flex-column align-items-center'>
+                    <img src={Logo} className="logo" alt='Character'></img>
+                </div>
+
+                <form onSubmit={handleSubmit} className="text-center">
+                    <input
+                        type="text"
+                        name=""
+                        className='searchInput'
+                        id="searchField"
+                        value={query}
+                        placeholder="Search for a character"
+                        onChange={handleChange}
+                    />
+
+                </form>
+                <div className='text-center mt-2'>
+                    <button type='submit' className='resetBtn' onClick={reload}>Reset</button>
+                </div>
+                <section>
+
+                    {searchCharacters &&
+                        <div className='results'>
+                            <div className="card d-flex justify-content-center cardTable">
+                                <div className="col-sm-6">
+                                    <ul>
+                                        {data.results.map(item => (
+                                            <li
+                                                key={item.id}
+                                                className=" d-flex list-group-item align-items-center shadow rounded text-left cardList"
+                                            >
+                                                <img src={item.image} className="card-image characterImage" alt={item.name} />
+
+                                                <div className="card-body p-1 characterCards">
+                                                    <h6 className="characterId">#{item.id}</h6>
+                                                    <h2>{item.name}</h2>
+                                                    <h6>{item.status} - {item.species} - {item.gender}</h6>
+                                                    <p className=" lastLocation">Last Known Location:</p>
+                                                    <h6>{item.location.name}</h6>
+                                                </div>
+                                            </li>
+                                        ))}
+                                    </ul>
                                 </div>
                             </div>
 
-                        </div>
-
-                    </main>
-<Character />
-
-                </header>
+                        </div>}
 
 
-                {/* <main className="container mt-5 justify-content-center">
-                    <div className="card col md-6 text-center">
-                        <div className="card-body shadow rounded">
-                            <h3 className="card-title">Rick and Morty Routing Lab</h3>
-                            <p className="card-text">
-                                Welcome to my React Routing Lab using The Rick and Morty API.
-                                This is like a mini IMDB for the Rick and Morty animated series. I
-                                use React, useState and useEffect hooks, along with Fetch, a REST API,
-                                Bootstrap, and React Router to build this project. Use the
-                                navbar to click around to find characters, locations, episodes, and more. Enjoy!
-                            </p>
-                            <a href="mailto:maggiemagnum@gmail.com" className="card-link" id="emailLink">maggiemagnum@gmail.com</a>
-                        </div>
-                    </div>
-                </main> */}
+
+                </section>
+                {allCharacters && <Character />}
+
             </div>
         </div>
     )
