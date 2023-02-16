@@ -8,7 +8,7 @@ import MainNavbar from '../components/Navbar';
 import { CatIcon } from '../components/Navbar/NavbarElements';
 import { GiHollowCat } from 'react-icons/gi';
 import "../css/MainHome.css";
-import useScrollSnap from 'react-use-scroll-snap';
+// import useScrollSnap from 'react-use-scroll-snap';
 
 
 const About = lazy(() => import('./About'));
@@ -60,8 +60,8 @@ const MainHome = () => {
     window.addEventListener('scroll', changeCat)
   }, []);
 
-  const scrollRef = useRef(null);
-  useScrollSnap({ref: scrollRef, duration: 25, delay: 5});
+  // const scrollRef = useRef(null);
+  // useScrollSnap({ref: scrollRef, duration: 25, delay: 5});
 
 
   return (
@@ -73,7 +73,7 @@ const MainHome = () => {
         <GiHollowCat onClick={() => { scrollDownVideo() }} />
       </CatIcon>}
 
-      <div className='snapScrollContainer' ref={scrollRef}>
+      <div className='snapScrollContainer' >
 
         <section className='homeSections' >
           <HeroSection />

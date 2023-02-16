@@ -8,21 +8,22 @@ import {
   GiDiceSixFacesSix,
 } from 'react-icons/gi'
 
-
 export const DieNumbers = ({ num }) => {
 
-  if (num === 1) {
-    return (<GiDiceSixFacesOne />)
-  } if (num === 2) {
-    return (<GiDiceSixFacesTwo />)
-  } if (num === 3) {
-    return (<GiDiceSixFacesThree />)
-  } if (num === 4) {
-    return (<GiDiceSixFacesFour />)
-  } if (num === 5) {
-    return (<GiDiceSixFacesFive />)
-  } if (num === 6) {
-    return (<GiDiceSixFacesSix />)
-  }
+  
 
+   return num === 1 ? (
+        <GiDiceSixFacesOne />
+      ) : num === 2 ? (
+        <GiDiceSixFacesTwo />
+      ) : num === 3 ? (
+        <GiDiceSixFacesThree />
+      ) : num === 4 ? (
+        <GiDiceSixFacesFour />
+      ) : num === 5 ? (
+        <GiDiceSixFacesFive />
+      ) : (
+        <GiDiceSixFacesSix />
+      );
 }
+

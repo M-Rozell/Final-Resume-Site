@@ -1,12 +1,32 @@
 
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { DieNumbers } from "./DieNumbers";
+import { AiFillCloseCircle } from 'react-icons/ai';
 import "../../css/Dicey.css";
 
 
 export const Dicey = ({ closeModal, openBtn }) => {
 
   const [newDie, setNewDie] = useState([]);
+  const [disableBtn, setDisableBtn] = useState(false)
+  const squareRef = useRef(null)
+
+  //disable button when height of square is met
+  useEffect(() => {
+    const { bottom } = squareRef.current.getBoundingClientRect();
+    const height = window.innerHeight - 100;
+    if (bottom >= height) {
+      setDisableBtn(true)
+    }
+  }, [newDie])
+
+  //when a dice is dblClicked it disappears
+  const handleDblClick = (i) => {
+    const newArray = [...newDie];
+    newArray.splice(i, 1);
+    setNewDie(newArray)
+
+  }
 
   //Array of dice Numbers
   // useEffect(() => {
@@ -28,6 +48,8 @@ export const Dicey = ({ closeModal, openBtn }) => {
   };
 
 
+
+
   //Sum of Displayed Dice
   const handleSum = () => {
     const sumDie = newDie.reduce((result, number) => result + number);
@@ -44,36 +66,40 @@ export const Dicey = ({ closeModal, openBtn }) => {
 
 
   return (
-    <div className="diceyContainer">
-      <button
+    <div className="diceyContainer" >
+      <button className="diceyCloseBtn"
         onClick={() => {
           handleDiceyClose();
         }}
       >
-        Close
+        <AiFillCloseCircle />
       </button>
-      <div className="btnContainer">
-        <button className="newDie" onClick={() => handleNewDie()}>
-          New Die
+      <div className="btnContainer" >
+        <button className="newDie" onClick={() => handleNewDie()} disabled={disableBtn}>
+          New
         </button>
 
         <button className="rerollDie" onClick={() => handleReroll()}>
-          Reroll Die
+          Reroll
         </button>
 
         <button className="sumDie" onClick={() => handleSum()}>
-          Sum Die
+          Sum
         </button>
       </div>
-      <ul className="diceContainer">
+<p className="diceyP">Double Click on any Die to remove it</p>
 
-        {newDie.map((num, i) => (
-          <li key={i} className="dice">
-            <DieNumbers num={num} />
-          </li>
-        ))}
+      <div className="diceContainerDiv" ref={squareRef}>
+        <ul className="diceUl" >
 
-      </ul>
+          {newDie.map((num, i) => (
+            <li key={i} className="dice" onDoubleClick={() => handleDblClick(i)}>
+              <DieNumbers num={num} />
+            </li>
+          ))}
+
+        </ul>
+      </div>
     </div>
   );
 };

@@ -1,17 +1,55 @@
 
-.diceyContainer {
-    margin-top: 1.5rem;
-    width: 60vw;
-    height: 75vh;
-    background-color: rgba(0, 0, 0, 0.2);
+
+.diceyCloseBtn {
     display: flex;
-    flex-direction: column;
-    overflow: hidden;
+    justify-content: flex-end;
+    background-color: transparent;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    color: rgb(40, 40, 40, 0.8);
 }
 
-.diceContainer{
+
+.diceyContainer {
+    margin-top: 2rem;
     width: 60vw;
-    height: 75vh;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    /* overflow: hidden; */
+}
+
+.newDie,
+.rerollDie,
+.sumDie {
+  background-color: #222;
+  border-radius: 4px;
+  padding: 3px 20px;
+  border: .5px solid white;
+  color: #b2b1b1;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 0;
+  text-align: center;
+}
+
+.newDie:hover,
+.rerollDie:hover,
+.sumDie:hover {
+    opacity: .75;
+}
+
+.diceyP {
+    color: #020006; 
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+
+.diceUl{
     display: flex;
     justify-content: space-around;
     float: left;
@@ -20,10 +58,8 @@
 }
 
 .dice {
-    margin-top: 1rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
     cursor: pointer;
     font-size: 3rem;
-    
+    margin: 0.5rem;
 }
+
